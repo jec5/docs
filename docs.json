@@ -89,8 +89,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/fielo-light.png",
+    "dark": "/logo/fielo-dark.png"
   },
   "navbar": {
     "links": [
