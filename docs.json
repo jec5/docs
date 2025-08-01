@@ -3,9 +3,9 @@
   "theme": "willow",
   "name": "Fielo",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0C8EFF",
+    "light": "#00B5F1",
+    "dark": "#0668C9"
   },
   "favicon": "/fielo-favicon-4colors.png",
   "navigation": {
@@ -107,9 +107,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/fieloww",
+      "youtube": "https://www.youtube.com/channel/UCTv33JUhjwpWigHhimhzRyA",
+      "linkedin": "https://www.linkedin.com/company/fielo/"
     }
   }
 }
