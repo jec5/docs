@@ -7,7 +7,7 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "https://gageplatprod1stor1.blob.core.windows.net/portal/48/favicon.ico",
   "navigation": {
     "tabs": [
       {
