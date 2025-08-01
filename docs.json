@@ -71,18 +71,18 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://docs.fieloloyalty.com",
-          "icon": "book-open-cover"
+          "anchor": "Book a Demo",
+          "href": "https://www.fielo.com/contact-us",
+          "icon": "laptop"
         },
         {
           "anchor": "Resource Center",
           "href": "https://www.fielo.com/resources",
-          "icon": "slack"
+          "icon": "book-open-cover"
         },
         {
           "anchor": "Blog",
-          "href": "https://fielo.com/blog",
+          "href": "https://www.fielo.com/blog",
           "icon": "newspaper"
         }
       ]
