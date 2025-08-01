@@ -95,14 +95,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
+        "label": "Get support",
         "href": "https://fieloww.atlassian.net/servicedesk"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Book a chat",
+      "href": "https://calendar.app.google/8AmvRp344mSFXe6B7"
     }
   },
   "footer": {
