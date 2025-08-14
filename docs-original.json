@@ -1,0 +1,116 @@
+
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "willow",
+  "name": "Fielo",
+  "colors": {
+    "primary": "#0C8EFF",
+    "light": "#00B5F1",
+    "dark": "#0668C9"
+  },
+  "favicon": "/fielo-favicon-4colors.png",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "quickstart",
+              "development"
+            ]
+          },
+          {
+            "group": "Customization",
+            "pages": [
+              "essentials/settings",
+              "essentials/navigation"
+            ]
+          },
+          {
+            "group": "Writing content",
+            "pages": [
+              "essentials/markdown",
+              "essentials/code",
+              "essentials/images",
+              "essentials/reusable-snippets"
+            ]
+          },
+          {
+            "group": "AI tools",
+            "pages": [
+              "ai-tools/cursor",
+              "ai-tools/claude-code",
+              "ai-tools/windsurf"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API reference",
+        "groups": [
+          {
+            "group": "API documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Book a Demo",
+          "href": "https://www.fielo.com/contact-us",
+          "icon": "laptop"
+        },
+        {
+          "anchor": "Resource Center",
+          "href": "https://www.fielo.com/resources",
+          "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://www.fielo.com/blog",
+          "icon": "newspaper"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/fielo-light.png",
+    "dark": "/logo/fielo-dark.png"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Get support",
+        "href": "https://fieloww.atlassian.net/servicedesk"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Book a chat",
+      "href": "https://calendar.app.google/8AmvRp344mSFXe6B7"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/fieloww",
+      "youtube": "https://www.youtube.com/channel/UCTv33JUhjwpWigHhimhzRyA",
+      "linkedin": "https://www.linkedin.com/company/fielo/"
+    }
+  }
+}
