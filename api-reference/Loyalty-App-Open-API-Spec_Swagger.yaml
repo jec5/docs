@@ -1,0 +1,782 @@
+openapi: 3.0.0
+info:
+  title: Fielo Loyalty App API Spec
+  version: 1.0.0
+paths:
+  /Store/dx/api/application/v2/objects:
+  # Prefix Store need to be removed when using the API.
+    post:
+      summary: Create Store
+      requestBody:
+        content:
+          application/json:
+            example:
+              objectTypeID: Store
+              content:
+                Origin: API
+                StoreCode: NW-RJ450
+                Name: Store6
+                Description: Store6 Description
+                Address:
+                  Street: Street1
+                  City: City1
+                  StateProvince: State1
+                  Country: BRAZIL
+                  PostalCode: '12345'
+                IsParticipating: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    status: Open-Active
+                ID: STE6TG95YWx0eV9fU3RvcmVfNjg5ZGUzMTdmNjgxNGYwMGE2ODkyMjFj
+                confirmationNote: This stage is ready to transition.
+  /dx/api/application/v2/data_views/GetStoreByBusinessKeys:
+    post:
+      summary: Get Store by Store Code
+      requestBody:
+        content:
+          application/json:
+            example:
+              dataViewParameters:
+                StoreCode: NW-RJ450
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                - '@version': 1
+                  '@class': Store
+                  ID: STE6TG95YWx0eV9fU3RvcmVfNjg5ZGUzMTdmNjgxNGYwMGE2ODkyMjFj
+                  Name: Store6
+                  UpdateDateTime: '2025-08-14T13:22:31.113Z'
+                  CreateDateTime: '2025-08-14T13:22:31.113Z'
+                  CreateUser:
+                    '@class': User
+                    ID: STE6UGVnYVBsYXRmb3JtX19Vc2VyXzY4NjcxYjRjOTU4OGNkM2JmYmVkZjg1Mw
+                  UpdateUser:
+                    '@class': User
+                    ID: STE6UGVnYVBsYXRmb3JtX19Vc2VyXzY4NjcxYjRjOTU4OGNkM2JmYmVkZjg1Mw
+                  ApplicationName: Loyalty
+                  UpdateUserID: systemuser_burgerkingapiuser_rhdlfx8bukx9ttqa
+                  CreateUserID: systemuser_burgerkingapiuser_rhdlfx8bukx9ttqa
+                  ApplicationVersion: 0.1.0-1
+                  HistoryCounter: 3
+                  Status: Open-Active
+                  BusinessID: S-704RMN
+                  Description: Store6 Description
+                  pzCaseTypeID: CaseType-Loyalty__Store-Loyalty__Store
+                  CaseSLAEventID: goal:0c1ebc2d-c362-8cba-242f-2752f11939e8
+                  Origin: API
+                  pzActiveStates: []
+                  CurrentStageID: Active
+                  ConfirmationNote: This stage is ready to transition.
+                  CurrentStageName: Active
+                  Urgency: 10
+                  Assignments: []
+                  StoreCode: NW-RJ450
+                  StoreStatus: Active
+                  IsParticipating: true
+                  Address:
+                    '@class': LocationAddress
+                    ID: STE6TG95YWx0eV9fTG9jYXRpb25BZGRyZXNzXzY4OWRlMzE3ZjY4MTRmMDBhNjg5MjIyMA
+                    StateProvince: State1
+                    Street: Street1
+                    City: City1
+                    PostalCode: '12345'
+                    Country: BRAZIL
+                resultCount: 1
+                fetchDateTime: '2025-08-14T13:23:32.457Z'
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fU3RvcmVfNjg5ZGUzMTdmNjgxNGYwMGE2ODkyMjFj/actions/Edit:
+    patch:
+      summary: Update Store
+      requestBody:
+        content:
+          application/json:
+            example:
+              content:
+                Name: Store4
+                Description: Store4 Description
+                StoreCode: NW-RJ450
+                Address:
+                  Street: Street1
+                  City: City1
+                  StateProvince: State1
+                  PostalCode: '12345'
+                  Country: BRAZIL
+                IsParticipating: true
+              pageInstructions: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    status: Open-Active
+                confirmationNote: This stage is ready to transition.
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fU3RvcmVfNjg5ZGUzMTdmNjgxNGYwMGE2ODkyMjFj/actions/DeleteObject:
+    patch:
+      summary: Delete Store
+      requestBody:
+        content:
+          application/json:
+            example:
+              pageInstructions: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    status: Resolved-Deleted
+                confirmationNote: This stage is ready to transition.
+  /Product/dx/api/application/v2/objects:
+  # Prefix Product need to be removed when using the API.
+    post:
+      summary: Create Product
+      requestBody:
+        content:
+          application/json:
+            example:
+              objectTypeID: Product
+              content:
+                Origin: API
+                Name: Nuggets
+                Description: Nuggets
+                ProductCode: '19520'
+                Brand: Burger King
+                Category: Snack
+                Incentivizable: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    status: Open-Active
+                  ID: STE6TG95YWx0eV9fUHJvZHVjdF82ODlkZTM4MWY2ODE0ZjAwYTY4OTIyMmY
+                  confirmationNote: This stage is ready to transition.
+  /dx/api/application/v2/data_views/GetProductByBusinessKeys:
+    post:
+      summary: Get Product by Product Code
+      requestBody:
+        content:
+          application/json:
+            example:
+              dataViewParameters:
+                ProductCode: '19520'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                - '@version': 1
+                  '@class': Product
+                  ID: STE6TG95YWx0eV9fUHJvZHVjdF82ODlkZTM4MWY2ODE0ZjAwYTY4OTIyMmY
+                  Name: Nuggets
+                  UpdateDateTime: '2025-08-14T13:24:17.304Z'
+                  CreateDateTime: '2025-08-14T13:24:17.304Z'
+                  CreateUser:
+                    '@class': User
+                    ID: STE6UGVnYVBsYXRmb3JtX19Vc2VyXzY4NjcxYjRjOTU4OGNkM2JmYmVkZjg1Mw
+                  UpdateUser:
+                    '@class': User
+                    ID: STE6UGVnYVBsYXRmb3JtX19Vc2VyXzY4NjcxYjRjOTU4OGNkM2JmYmVkZjg1Mw
+                  ApplicationName: Loyalty
+                  UpdateUserID: systemuser_burgerkingapiuser_rhdlfx8bukx9ttqa
+                  CreateUserID: systemuser_burgerkingapiuser_rhdlfx8bukx9ttqa
+                  ApplicationVersion: 0.1.0-1
+                  HistoryCounter: 3
+                  Status: Open-Active
+                  BusinessID: P-092BDW
+                  Description: Nuggets
+                  pzCaseTypeID: CaseType-Loyalty__Product-Loyalty__Product
+                  CaseSLAEventID: goal:3b3a63be-bc32-9846-c7fa-df7bb58e1d10
+                  Origin: API
+                  pzActiveStates: []
+                  CurrentStageID: Active
+                  ConfirmationNote: This stage is ready to transition.
+                  CurrentStageName: Active
+                  Urgency: 10
+                  Assignments: []
+                  Incentivizable: true
+                  Category: Snack
+                  Brand: Burger King
+                  ProductCode: '19520'
+                resultCount: 1
+                fetchDateTime: '2025-08-14T13:27:18.137Z'
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fUHJvZHVjdF82ODlkZTM4MWY2ODE0ZjAwYTY4OTIyMmY/actions/Edit:
+    patch:
+      summary: Update Product
+      requestBody:
+        content:
+          application/json:
+            example:
+              content:
+                Name: Product
+                Description: UpdatedDescription
+                ProductCode: '19520'
+                Brand: Brand
+                Category: Category
+                Incentivizable: true
+              pageInstructions: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    status: Open-Active
+                confirmationNote: This stage is ready to transition.
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fUHJvZHVjdF82ODlkZTM4MWY2ODE0ZjAwYTY4OTIyMmY/actions/DeleteObject:
+    patch:
+      summary: Delete Product
+      requestBody:
+        content:
+          application/json:
+            example:
+              pageInstructions: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    status: Resolved-Deleted
+                confirmationNote: This stage is ready to transition.
+  /Reward/dx/api/application/v2/objects:
+  # Prefix Reward need to be removed when using the API.
+    post:
+      summary: Create Reward
+      requestBody:
+        content:
+          application/json:
+            example:
+              objectTypeID: Reward
+              content:
+                Origin: API
+                Name: BK Apparel
+                ExternalID: '45670'
+                RewardType: stock_control
+                RewardExpiration: '2025-09-06T04:00:00.000Z'
+                RewardCost: ''
+                DaysAvailable: ''
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    status: Open-Active
+                    content:
+                      classID: Reward
+                      Name: BK Apparel
+                      DaysAvailable: ''
+                      RewardExpiration: '2025-09-06T04:00:00.000Z'
+                      RewardCost: ''
+                      ExternalID: '45670'
+                      RewardType: stock_control
+                      Prices: []
+                      QuantityAvailable: ''
+                ID: STE6TG95YWx0eV9fUmV3YXJkXzY4OWRmMWM0ZjY4MTRmMDBhNjg5MjI1Ng
+  /dx/api/application/v2/data_views/GetRewardByBusinessKeys:
+    post:
+      summary: Get Reward By ExternalID
+      requestBody:
+        content:
+          application/json:
+            example:
+              dataViewParameters:
+                ExternalID: '45670'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                - '@version': 2
+                  '@class': Reward
+                  ID: STE6TG95YWx0eV9fUmV3YXJkXzY4OWRmMWM0ZjY4MTRmMDBhNjg5MjI1Ng
+                  Name: BK Apparel
+                  UpdateDateTime: '2025-08-14T14:27:05.655Z'
+                  CreateDateTime: '2025-08-14T14:25:08.491Z'
+                  CreateUser:
+                    '@class': User
+                    ID: STE6UGVnYVBsYXRmb3JtX19Vc2VyXzY4NjcxYjRjOTU4OGNkM2JmYmVkZjg1Mw
+                  UpdateUser:
+                    '@class': User
+                    ID: STE6UGVnYVBsYXRmb3JtX19Vc2VyXzY4NjcxYjRjOTU4OGNkM2JmYmVkZjg1Mw
+                  ApplicationName: Loyalty
+                  UpdateUserID: systemuser_burgerkingapiuser_rhdlfx8bukx9ttqa
+                  CreateUserID: systemuser_burgerkingapiuser_rhdlfx8bukx9ttqa
+                  ApplicationVersion: 0.1.0-1
+                  HistoryCounter: 2
+                  Status: Open-Active
+                  BusinessID: RW-260UFW
+                  pzCaseTypeID: CaseType-Loyalty__Reward-Loyalty__Reward
+                  CaseSLAEventID: goal:993de2a0-04fe-8c44-d94a-d9b7f4d319c3
+                  Origin: API
+                  RewardExpiration: '2025-09-06T04:00:00.000Z'
+                  QuantityAvailable: 10
+                  Prices: []
+                  ExternalID: '45670'
+                  RewardType: stock_control
+                  RewardQuantity: 10
+                resultCount: 1
+                fetchDateTime: '2025-08-14T16:35:09.847Z'
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fUmV3YXJkXzY4OWRmMWM0ZjY4MTRmMDBhNjg5MjI1Ng/actions/AddRewardStock:
+    patch:
+      summary: Add Reward Stock
+      requestBody:
+        content:
+          application/json:
+            example:
+              content:
+                RewardQuantity: 100
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    status: Open-Active
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fU3RvcmVfNjg2N2UyNDFjOGJmZDE3ZGQ3ZDQ2NDBj/actions/DeleteObject:
+    patch:
+      summary: Delete Reward
+      requestBody:
+        content:
+          application/json:
+            example:
+              pageInstructions: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    status: Resolved-Deleted
+  /dx/api/application/v2/data_views/ProgramList:
+    post:
+      summary: Get Program List
+      requestBody:
+        content:
+          application/json:
+            example:
+              dataViewParameters:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                - '@version': 4
+                  '@class': Program
+                  ID: STE6TG95YWx0eV9fUHJvZ3JhbV82ODY3ZWE5Yzk1ODhjZDNiZmJlZGY5OWQ
+                  Name: Customer Loyalty Program
+                  UpdateDateTime: '2025-07-28T14:23:37.904Z'
+                  CreateDateTime: '2025-07-04T14:52:12.356Z'
+                  CreateUser:
+                    '@class': User
+                    ID: STE6UGVnYVBsYXRmb3JtX19Vc2VyXzY4MmJkNzExNTlhZGM0N2E4NTU5MDJhOQ
+                  UpdateUser:
+                    '@class': User
+                    ID: STE6UGVnYVBsYXRmb3JtX19Vc2VyXzY4MmJkOTA1NTlhZGM0N2E4NTU5MDJhZA
+                  ApplicationName: Loyalty
+                  UpdateUserID: john.clark@fielo.com
+                  CreateUserID: parag.jain@pega.com
+                  ApplicationVersion: 0.1.0-1
+                  HistoryCounter: 4
+                  Status: Open-Active
+                  BusinessID: P-337UUW
+                  Description: Customer Loyalty Program
+                  pzCaseTypeID: CaseType-Loyalty__Program-Loyalty__Program
+                  CaseSLAEventID: goal:108e63e7-8ec6-38ca-797c-aab1279d8502
+                  Currencies:
+                  - '@class': Currency
+                    ID: STE6TG95YWx0eV9fQ3VycmVuY3lfNjgyYjczNzk1OWFkYzQ3YTg1NThmODZi
+                  TimeZoneText: America/Sao_Paulo
+                resultCount: 1
+                fetchDateTime: '2025-08-14T16:40:09.857Z'
+  /Member/dx/api/application/v2/objects:
+  # Prefix Member need to be removed when using the API.
+    post:
+      summary: Create Member
+      requestBody:
+        content:
+          application/json:
+            example:
+              objectTypeID: Member
+              content:
+                Origin: API
+                ExternalID: '34567890'
+                DateOfBirth: '2010-07-05'
+                EmailAddress: Sample@email.com
+                FullName: Sample Member
+                MobileNumber: '9876543210'
+                JoinDateTime: '2023-05-06T16:56:27.066Z'
+                ProgramBusinessID: P-337UUW
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              example:
+               data:
+                 objectInfo:
+                   status: Open-Active
+               ID: STE6TG95YWx0eV9fTWVtYmVyXzY4OWUxMTk1ZjY4MTRmMDBhNjg5MjJlZA
+               confirmationNote: This stage is ready to transition.
+  /dx/api/application/v2/data_views/MemberByExternalID:
+    post:
+      summary: Get Member By ExternalID
+      requestBody:
+        content:
+          application/json:
+            example:
+              dataViewParameters:
+                ExternalID: 34567890
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                - '@version': 1
+                  '@class': Member
+                  ID: STE6TG95YWx0eV9fTWVtYmVyXzY4OWUxMTk1ZjY4MTRmMDBhNjg5MjJlZA
+                  Name: Member
+                  UpdateDateTime: '2025-08-14T16:40:53.602Z'
+                  CreateDateTime: '2025-08-14T16:40:53.602Z'
+                  CreateUser:
+                    '@class': User
+                    ID: STE6UGVnYVBsYXRmb3JtX19Vc2VyXzY4NjcxYjRjOTU4OGNkM2JmYmVkZjg1Mw
+                  UpdateUser:
+                    '@class': User
+                    ID: STE6UGVnYVBsYXRmb3JtX19Vc2VyXzY4NjcxYjRjOTU4OGNkM2JmYmVkZjg1Mw
+                  ApplicationName: Loyalty
+                  UpdateUserID: systemuser_burgerkingapiuser_rhdlfx8bukx9ttqa
+                  CreateUserID: systemuser_burgerkingapiuser_rhdlfx8bukx9ttqa
+                  ApplicationVersion: 0.1.0-1
+                  HistoryCounter: 3
+                  Status: Open-Active
+                  BusinessID: M-904FZB
+                  pzCaseTypeID: CaseType-Loyalty__Member-Loyalty__Member
+                  CaseSLAEventID: goal:527ea211-07b0-2d86-9885-1690fbdcbc7c
+                  Origin: API
+                  pzActiveStates: []
+                  CurrentStageID: Active
+                  ConfirmationNote: This stage is ready to transition.
+                  CurrentStageName: Active
+                  Urgency: 10
+                  Assignments: []
+                  EmailAddress: Sample@email.com
+                  Balances: []
+                  ExternalID: '34567890'
+                  MobileNumber: '9876543210'
+                  BirthMonth: 7
+                  Segments: []
+                  FullName: Sample Member
+                  Program:
+                    '@class': Program
+                    ID: STE6TG95YWx0eV9fUHJvZ3JhbV82ODY3ZWE5Yzk1ODhjZDNiZmJlZGY5OWQ
+                  ProgramBusinessID: P-337UUW
+                  JoinDateTime: '2023-05-06T16:56:27.066Z'
+                  DateOfBirth: '2010-07-05'
+                resultCount: 1
+                fetchDateTime: '2025-08-14T16:41:38.872Z'
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fTWVtYmVyXzY4OWUxMTk1ZjY4MTRmMDBhNjg5MjJlZA/actions/AddBalance:
+    patch:
+      summary: Add Balance To Member
+      requestBody:
+        content:
+          application/json:
+            example:
+              content: 
+                AdjustBalances:
+                  Amount: 20
+                  Name: Points
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    ID: STE6TG95YWx0eV9fTWVtYmVyXzY4OWUxMTk1ZjY4MTRmMDBhNjg5MjJlZA
+                    status: Open-Active
+                confirmationNote: This stage is ready to transition.
+  /Sale/dx/api/application/v2/objects:
+  # Prefix Sale need to be removed when using the API.
+    post:
+      summary: Create Sale
+      requestBody:
+        content:
+          application/json:
+            example:
+              objectTypeID: SaleCase
+              content:
+                Origin: API
+                ExternalID: 3a55aa921945595279542051
+                SaleChannelCode: TT01
+                PointOfSaleID: '10'
+                SaleItems:
+                  - ProductCode: '19529'
+                    Quantity: 1
+                    TotalAmount: 10
+                  - ProductCode: '19527'
+                    Quantity: 1
+                    TotalAmount: 10
+                  - ProductCode: '19856'
+                    Quantity: 1
+                    TotalAmount: 10
+                SaleDateTime: '2025-07-01T10:56:27.066Z'
+                MemberExternalID: 99691eb263-3573-4be4-90b5-abe027d7b4ec
+                StoreCode: NW-RJ567
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              example:
+               data:
+                 objectInfo:
+                   status: Pending-Ready To Process
+               ID: STE6TG95YWx0eV9fU2FsZUNhc2VfNjg5YmE0OTcxZGQzOTQyZjgxMTUzNzg2
+               confirmationNote: The next step has been routed appropriately.
+  /Segment/dx/api/application/v2/objects:
+  # Prefix Segment need to be removed when using the API.
+    post:
+      summary: Create Segment
+      requestBody:
+        content:
+          application/json:
+            example:
+              objectTypeID: SegmentCase
+              content:
+                Name: Test segment
+                Description: Test segment
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    ID: STE6TG95YWx0eV9fU2VnbWVudENhc2VfNjg5ZTExZTkxZGQzOTQyZjgxMTYzNjY3
+                    status: New-Segment Case creation
+                ID: STE6TG95YWx0eV9fU2VnbWVudENhc2VfNjg5ZTExZTkxZGQzOTQyZjgxMTYzNjY3
+                
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fU2VnbWVudENhc2VfNjg5ZTExZTkxZGQzOTQyZjgxMTYzNjY3/actions/MarkAsActive:
+    patch:
+      summary: Mark Segment Active
+      requestBody:
+        content:
+          application/json:
+            example:
+              pageInstructions: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    ID: STE6TG95YWx0eV9fU2VnbWVudENhc2VfNjg5ZTExZTkxZGQzOTQyZjgxMTYzNjY3
+                    status: Open-Active
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fU2VnbWVudENhc2VfNjg5ZTExZTkxZGQzOTQyZjgxMTYzNjY3/actions/MarkAsInactive:
+    patch:
+      summary: Mark Segment Inactive
+      requestBody:
+        content:
+          application/json:
+            example:
+              pageInstructions: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    ID: STE6TG95YWx0eV9fU2VnbWVudENhc2VfNjg5ZTExZTkxZGQzOTQyZjgxMTYzNjY3
+                    status: Resolved-Inactive
+  /dx/api/application/v2/data_views/LedgerEntriesBetweenDates:
+    post:
+      summary: Get Ledger Entries Between Dates
+      requestBody:
+        content:
+          application/json:
+            example:
+              dataViewParameters:
+                MemberExternalID: '34567890'
+                FromDateTime: '2025-08-01T21:50:42.060Z'
+                ToDateTime: '2025-08-15T21:50:42.060Z'
+              query:
+                select:
+                - field: CurrencyAvailable
+                - field: CurrencyAwarded
+                - field: Type
+                - field: Member
+                - field: MemberBalance
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                - '@version': 1
+                  '@class': LedgerEntryCase
+                  CurrencyAvailable: 20
+                  CurrencyAwarded: 20
+                  Type: Adjustment
+                  MemberBalance: 20
+                  ID: STE6TG95YWx0eV9fTGVkZ2VyRW50cnlDYXNlXzY4OWUxMWQ5ZjY4MTRmMDBhNjg5MjJmNA
+                resultCount: 1
+                fetchDateTime: '2025-08-14T17:02:06.440Z'
+  /Redemption/dx/api/application/v2/objects:
+  # Prefix Redemption need to be removed when using the API.
+    post:
+      summary: Create Redemption
+      requestBody:
+        content:
+          application/json:
+            example:
+              objectTypeID: RedemptionCase
+              content:
+                Origin: API
+                MemberExternalID: '34567890'
+                RedemptionItems:
+                  - Quantity: '1'
+                    RewardExternalID: '34567'
+                    VoucherCode: '45324125'
+                  - Quantity: '1'
+                    RewardExternalID: '45678'
+                    VoucherCode: 2312312a
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    ID: STE6TG95YWx0eV9fUmVkZW1wdGlvbkNhc2VfNjg5ZTRiYmYxZGQzOTQyZjgxMTYzODE4
+                    status: Open-Ready To Process
+                ID: STE6TG95YWx0eV9fUmVkZW1wdGlvbkNhc2VfNjg5ZTRiYmYxZGQzOTQyZjgxMTYzODE4
+  /dx/api/application/v2/data_views/RedemptionItemsByVoucherCode:
+    post:
+      summary: Get RedemptionItem by Voucher Code
+      requestBody:
+        content:
+          application/json:
+            example:
+              dataViewParameters:
+                Voucher Code: 2312312a
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                - '@version': 1
+                  '@class': RedemptionItemCase
+                  ID: STE6TG95YWx0eV9fUmVkZW1wdGlvbkl0ZW1DYXNlXzY4OWUxNzMwZjY4MTRmMDBhNjg5MjM1MA
+                  Name: Redemption Item
+                  UpdateDateTime: '2025-08-14T17:04:48.708Z'
+                  CreateDateTime: '2025-08-14T17:04:48.708Z'
+                  ApplicationName: Loyalty
+                  UpdateUserID: SystemUser
+                  CreateUserID: SystemUser
+                  ApplicationVersion: 0.1.0-1
+                  HistoryCounter: 2
+                  Status: Open-Available With Expiry
+                  BusinessID: RI-799RHG
+                  pzCaseTypeID: CaseType-Loyalty__RedemptionItemCase-Loyalty__RedemptionItemCase
+                  CaseSLAEventID: goal:81b2ef49-c4f7-3c0d-17f2-da25eecd0763
+                  pzActiveStates: []
+                  CurrentStageID: AvailableWithExpiry
+                  ConfirmationNote: This stage is ready to transition.
+                  CurrentStageName: Available With Expiry
+                  Urgency: 10
+                  Quantity: 1
+                  Reward:
+                    '@class': Reward
+                    ID: STE6TG95YWx0eV9fUmV3YXJkXzY4NjdlN2U4OTU4OGNkM2JmYmVkZjk4NA
+                  Redemption:
+                    '@class': RedemptionCase
+                    ID: STE6TG95YWx0eV9fUmVkZW1wdGlvbkNhc2VfNjg5ZTE3MmMxZGQzOTQyZjgxMTYzNjlj
+                  VoucherCode: 2312312a
+                  ExpirationDateTime: '2025-08-19T17:04:48.702Z'
+                  IsInstantRedemption: false
+                resultCount: 1
+                fetchDateTime: '2025-08-14T17:50:08.569Z'
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fUmVkZW1wdGlvbkl0ZW1DYXNlXzY4OWUxNzMwZjY4MTRmMDBhNjg5MjM1MA/actions/Lock:
+    patch:
+      summary: Lock Voucher Code
+      requestBody:
+        content:
+          application/json:
+            example:
+              content:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    ID: STE6TG95YWx0eV9fUmVkZW1wdGlvbkl0ZW1DYXNlXzY4OWUxNzMwZjY4MTRmMDBhNjg5MjM1MA
+                    status: Open-Active
+  /dx/api/application/v2/objects/STE6TG95YWx0eV9fUmVkZW1wdGlvbkl0ZW1DYXNlXzY4OWUxNzMwZjY4MTRmMDBhNjg5MjM1MA/actions/Use:
+    patch:
+      summary: Use Voucher Code
+      requestBody:
+         content:
+          application/json:
+            example:
+              content:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                data:
+                  objectInfo:
+                    ID: STE6TG95YWx0eV9fUmVkZW1wdGlvbkl0ZW1DYXNlXzY4OWUxNzMwZjY4MTRmMDBhNjg5MjM1MA
+                    status: Resolved-Completed
+                confirmationNote: Thank you! The case is now resolved.
