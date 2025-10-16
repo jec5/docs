@@ -4,4 +4,13 @@ title: "Programs"
 
 A program encapsulates a community of members that you want to influence, as well as how you target and reward them. To use Fielo, you must have at least one a program.
 
-To create a program, navigate to the Programs page and select **Create Program**.
+To create a program, navigate to the Programs page and select **Create Program**. In addition to a name and description, programs have the following settings:
+
+- _Time Zone_: This is the time zone by which ledger entries and redemption items will be marked as expired. It accepts the cannonical identifiers as described by the [tz database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) standard.
+- _Redemption Ceiling Tiebreaker_: If using redemption ceiling rules, this determines whether, when multiple rules apply, which rule will prevail. **Lowest Wins** means the lowest ceiling will be returned, while **Highest Wins** means the highest ceiling will be returned.
+- _Currencies_: The currencies selected will be usable in the program. Members will not be able to accrue any unselected currencies.
+
+Programs can be in one of two statuses:
+
+- _Open-Active_: The program's rules are to be processed against input data related to its members.
+- _Resolved-Inactive_: The program's rules will not be processed.
