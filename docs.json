@@ -25,7 +25,7 @@
           },
           {
             "group": "Runtime",
-            "icon": "square-play",
+            "icon": "play",
             "pages": [
               "runtime/sales"
             ]
