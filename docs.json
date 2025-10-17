@@ -14,18 +14,18 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Configuration",
-            "icon": "gear",
+            "group": "Design",
+            "icon": "pencil-ruler",
             "pages": [
-              "configuration/programs",
-              "configuration/datasets",
-              "configuration/products",
-              "configuration/stores"
+              "design/programs",
+              "design/datasets",
+              "design/products",
+              "design/stores"
             ]
           },
           {
             "group": "Runtime",
-            "icon": "quill",
+            "icon": "square-play",
             "pages": [
               "runtime/sales"
             ]
