@@ -1,0 +1,52 @@
+---
+title: "Sales"
+---
+
+A sale represents a purchase made by one of your customers. It is a core behavior that programs seek to influence. Different facets of sales can be incentivized, such as ticket size, frequency, product mix, and more.
+
+### Processing
+
+Sales are typically fed to Fielo from an external system of record via API, either in real time or by scheduled job. Fielo can process sales with line item granularity, as well as flat sales data.
+
+When a sale is registered into Fielo, it enters a queue which is cleared on a first-in, first-out basis. The sale is evaluated against the incentive rules of the program to which the customer belongs and, if any rules apply, the customer is rewarded.
+
+### Attributes
+
+For small-scale testing purposes, sales can be created from the Sales page. Sales have the following attributes:
+
+- _External ID_: This is the unique identifier for the sale. It typically originates in the external system of record. It is required.
+- _Sale Date Time_: This is the day and time at which the sale occurred. Timeboxed incentives use it to determine whether the sale occurred within the incentive period. If left blank, it will be assumed that the sale occurred at the time it was registered inside Fielo.
+- _Store_: This is the physical location at which the sale occurred. It is optional.
+- _Store Code_: This is the unique identifier of the store at which the sale occurred. It is used to associate a store with the sale when creating the sale via API. It is optional.
+- _Member_: This is the customer associated with the sale.
+- _Member External ID_: This is the unique identifier of the member on the sale. It is used to associate a member with the sale when creating the sale via API.
+- _Brand_: This is the brand at which the sale was made. It is optional.
+- _Sale Channel Code_: This identifies the channel through which the sale occurred. It is optional.
+- _Point of Sale ID_: This identifies the POS at which the sale occurred. It is optional.
+- _Total Amount_: This is the total amount paid on the sale. If sale items are included on the sale, this will be calculated as the sum of the line item amounts. If flat sales data is provided, this should be filled in when registering the sale inside Fielo.
+- _Incentivizable Amount_: This is the amount eligible for incentivization. If sale items are included on the sale, this will be calculated as the sum of the line item amounts of the sale items marked as incentivizable. If flat sales data is provided, this should be filled in when registering the sale inside Fielo.
+
+### Sale Items
+
+Sales can, optionally, be comprised of sale items. A sale item is a line item on the sale associated with a product. Sale items have the following attributes:
+
+- _Line Number_: The order in which the sale item appears on the sale. It is optional.
+- _Product_: The product that corresponds to the sale item.
+- _Product Code_: This is the unique identifier of the product that corresponds to the sale item. It is used to associate a product with the sale item when creating the sale via API.
+- _Description_: The description of the sale item's product. Filled in automatically.
+- _Incentivizable_: Indicates if the sale item's product is incentivizable. Filled in automatically.
+- _Quantity_: The number of units sold. It is optional.
+- _Unit Price_: The price per unit. It is optional.
+- _Original Amount_: The line item total before any discounts. It is optional. If desired, it must be filled in; it is <u>not</u> calculated.
+- _Net Amount_: The total paid net of any discounts.
+- _Discount Amount_: The difference between the original amount and the net amount. If the original amount is blank or less than the net amount, this will evaluate to 0. Filled in automatically.
+- _Discount Percentage_: The percentage of reduction from the original amount to the net amount. If the original amount is blank or less than the net amount, this will evaluate to 0. Filled in automatically.
+
+### Statuses
+
+Sales can be in one of four statuses:
+
+- _Pending-Ready to Process_: The sale has entered the system and is waiting to be processed.
+- _Pending-Processing_: The sale is being processed against the incentive rules of the member's program.
+- _Resolved-Processed_: The sale has been successfully processed against the incentive rules of the member's program.
+- _Resolved-Withdrawn_: Sale processing was aborted either because the associated member's status is not _Open-Active_ or due to a system error.
