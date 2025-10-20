@@ -27,6 +27,7 @@
             "group": "Runtime",
             "icon": "play",
             "pages": [
+              "runtime/members",
               "runtime/sales"
             ]
           }
