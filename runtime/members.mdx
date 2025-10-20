@@ -9,4 +9,21 @@ Members are the people you wish to influence through your program. You can targe
 Members can be created via API and from the Members page. Members have the following attributes:
 
 - _External ID_: This is the unique identifier for the member across systems. It is used to identify members on data that can originate from external systems, such as sales and events. It is required.
-- 
+- _Full Name_: The member's first and last name.
+- _Email Address_: The member's email address. Though not required, it cannot be duplicated among members.
+- _Mobile Number_: The member's cellular phone number.
+- _Date of Birth_: The member's birthday. This can be used to reward members on or near their birthday.
+- _Join Date Time_: The day and time the member registered into the program (when status first became _Open-Active_). This can be used to reward members on or near their program anniversary.
+- _Program_: A member must belong to one program.
+- _Last Activity Date Time_: The most recent day and time that the member interacted with the program.
+- _Balances_: For each currency active in the member's program, the member's current balance will be shown on this list.
+
+### Statuses
+
+Members can be in one of five statuses:
+
+- _Open-Prospective_: An optional preregistration status. The member is not yet registered in the program. Members do not yet earn rewards in this status.
+- _Open-Active_: The member is considered actively registered. This is the only status in which members are eligible to earn rewards.
+- _Resolved-BlockAccruals_: The member is blocked from receiving rewards, but can still redeem any active currency.
+- _Resolved-BlockAll_: The member is blocked from receiving rewards and redeeming currency.
+- _Resolved-Inactive_: The member is no longer in the program.
