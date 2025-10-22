@@ -22,22 +22,40 @@ With your incentive created, you can now add a rule. To do so, click on the **\+
 In addition to a name and description, rules include the following attributes:
 
 - _Source Data_: The data set corresponding to the behavior you want to incentivize, such as Sale or Event.
-- _Criteria_: The criteria that the member's behavior must meet in order for it to apply to the rule. Criteria are built upon attributes available on your source data. For example, if your rule only applies to sales over \$50, the criterion would look something like `Net Amount greater than $50`.
-- _Criteria Logical Expression_: Determines whether `All criteria must match` for the rule to be applied, or `Any criterion can match`.
-- _Type_: `No Competition` rules always reward qualifying members, while `Best Option` rules only reward a qualifying member if no other Best Option rule applies which would give the member a better reward. The "best option" is typically the rule that would give the member more currency. In the event two rules would give the member the same amount of currency, the one with the more generous expiration policy prevails.
+- _Criteria_: The criteria that the member's behavior must meet in order for it to apply to the rule. Criteria are built upon attributes available on your source data. For example, if your rule only applies to sales over \$50, the criterion will look something like `Net Amount greater than 50`.
+- _Criteria Logical Expression_: Determines whether **All criteria must match** for the rule to be applied, or **Any criterion can match**.
+- _Type_: **No Competition** rules always reward qualifying members, whilst **Best Option** rules only reward a qualifying member if no other Best Option rule applies which would give the member a better reward. The "best option" is typically the rule that would give the member more currency. In the event two rules would give the member the same amount of currency, the one with the more generous expiration policy prevails.
 
 ### Specify a Reward
 
 Finally, you can specify what the rule will reward to qualifying members. No Competition rules can give currency and instant rewards, while Best Option rules can only give currency.
 
+![Rule Reward Config Pn](/images/rule-reward-config.png)
+
 Currency rewards require the following:
 
-- _Conversion Mode_: 
-- _Conversion Value_: 
-- _Expiration Mode_: 
-- _Expiration Resolution_:
+- _Conversion Mode_: **Fixed Value** means the amount given will be the same for all members, while **Multiplier** means the amount given will be a multiple of a numeric attribute of the incentivized activity and **Divisor** means the amount given will be a quotient.
+- _Conversion Value_: If "Fixed Value" is selected, this is the amount of points to be given. If "Multiplier" is selected, this is the amount by which the Source Value Field will be multiplied in order to calculate the member's reward. If "Divisor" is selected, this is the amount by which the Source Value Field will be divided in order to calculate the member's reward.
+- _Source Value Field_: If "Multiplier" or "Divisor" is selected, this is the attribute that will be multiplied or divided by in order to calculate the member's reward. The attribute must be a numeric field from the source data.
+- _Expiration Mode_: Currency can be set to expire in a number of **Hours**, **Days** or **Months** from the moment it was earned, on a **Specific Date**, or annually on a **Recurring Date** (e.g. every year on 1st Jan). It can also be set for **No Expiration**.
+- _Units Until Expiration_: If "Hours", "Days" or "Months" is selected, this is the number of hours, days or months members will have to use the currency they earn through this rule.
+- _Expiration Date Time_: If "Specific Date" or "Recurring Date" is selected, this is the date (either specific or annual) that the currency given through this rule will expire.
+- _Expiration Resolution_: **Full Day** means that, on the last day their currency is valid, members will have the entire day to use it, whilst **Exact TIme** means the currency will expire at the same time of day as it was earned.
 
 Instant rewards require the following:
 
-- _Reward Mode_:
-- _Reward_:
+- _Reward Mode_: **Fixed Value **means the reward given will be the same for all members, while **Specified by Field** means the reward will be indicated by an attribute of the incentivized activity.
+- _Reward_: If "Fixed Value" is selected, this is the catalog reward that will be granted.
+- _Source Reward Field_: If "Specified by Field" is selected, this is the attribute that will indicate the catalog reward to be granted.
+
+### Activate an Incentive
+
+Once your rules are ready, you can activate your incentive from its detail page. Under the Incentive Rules list, click **Submit**.
+
+![Activate Incentive Button Pn](/images/activate-incentive-button.png)
+
+There is a short deployment process that needs to complete before your incentive becomes officially _Open-Active_. You can check its status on the Deployments page. Even when the deployment has finished, it may still take a few more minutes for the status of your incentive to reflect this.
+
+For incentives with a start date/time in the future, be assured that even in _Open-Active_ status, your incentive rules will only begin granting rewards at the defined start date/time.
+
+### Statuses
