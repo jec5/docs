@@ -19,6 +19,8 @@
             "pages": [
               "design/programs",
               "design/datasets",
+              "design/segments",
+              "design/incentives-config",
               "design/products",
               "design/stores"
             ]
