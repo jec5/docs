@@ -1,0 +1,37 @@
+---
+title: "Rewards"
+---
+
+Rewards are the prizes available to program members. They can represent any kind of product or service you wish to offer: physical items, vouchers, discount codes, invites, and more.
+
+Members can acquire rewards by exchanging currency for them or directly via incentive rules (instant rewards). When a member gets a reward, a redemption is created with one or more redemption items; each redemption item corresponds to an acquired reward.
+
+### Attributes
+
+To add a reward, navigate to the Rewards page and select **Create Reward**. In addition to a name and description, rewards have the following attributes:
+
+- _External ID_: This is how the reward will be identified on redemption requests made through API. It must be unique.
+- _Reward Type_: Rewards can have **Unlimited** stock, or have **Stock Control**. Stock-controlled rewards need to have an initial stock specified. Stock is automatically updated upon each redemption. Stock can be replenished at will. Stock is controlled via Reward Stock Entries.
+- _Prices_: If you want to allow members to exchange currency for this reward, you can set the price of the reward. If no price is set, the reward can still be granted through an incentive rule as an instant reward.
+- _Days Available_: The number of days following redemption that the redemption items corresponding to this reward will be available to use. When this period lapses, the redemption item will be marked as expired. If blank, redemption items corresponding to this reward will not expire.
+- _Reward End Date Time_: After this date and time, members will no longer be able to acquire this reward. If blank, the reward will be available indefinitely.
+- _Reward Cost_: The internal cost of this reward to your organization for accounting purposes.
+
+### Add Reward Stock
+
+If your reward is under **Stock Control**, you'll need to provide its initial stock before members can begin acquiring it.
+
+To do so, access the three-dot menu from the details pane, select **Add Reward Stock** and enter quantity you wish to add.
+
+![Add Reward Stock Pn](/images/add-reward-stock.png)
+
+As members acquire the reward, its stock will be consumed. When the stock has been depleted, no new redemptions of the reward will be allowed until stock has been replenished.
+
+### Statuses
+
+Rewards can be in one of two statuses:
+
+- _Open-Active_: Members can acquire the reward.
+- _Resolved-Inactive_: The reward cannot be acquired.
+
+Rewards no longer in use can be deleted.

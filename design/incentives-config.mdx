@@ -44,7 +44,7 @@ Currency rewards require the following:
 
 Instant rewards require the following:
 
-- _Reward Mode_: **Fixed Value **means the reward given will be the same for all members, while **Specified by Field** means the reward will be indicated by an attribute of the incentivized activity.
+- _Reward Mode_: \*\*Fixed Value \*\*means the reward given will be the same for all members, while **Specified by Field** means the reward will be indicated by an attribute of the incentivized activity.
 - _Reward_: If "Fixed Value" is selected, this is the catalog reward that will be granted.
 - _Source Reward Field_: If "Specified by Field" is selected, this is the attribute that will indicate the catalog reward to be granted.
 
@@ -54,8 +54,20 @@ Once your rules are ready, you can activate your incentive from its detail page.
 
 ![Activate Incentive Button Pn](/images/activate-incentive-button.png)
 
-There is a short deployment process that needs to complete before your incentive becomes officially _Open-Active_. You can check its status on the Deployments page. Even when the deployment has finished, it may still take a few more minutes for the status of your incentive to reflect this.
+There is a deployment process that needs to complete before the incentive and its rules officially become _Open-Active_. You can check its status on the Deployments page. Even when the deployment has finished, it may still take a few more minutes for the statuses of your incentive and rules to reflect this.
 
 For incentives with a start date/time in the future, be assured that even in _Open-Active_ status, your incentive rules will only begin granting rewards at the defined start date/time.
 
 ### Statuses
+
+Incentives can be in one of three statuses:
+
+- _Pending-Define Incentive Rules_: The incentive is in the process of being built. It needs to be activated before the rules will begin processing.
+- _Open-Active_: The incentive has been activated and its rules will process (within the timebox, if one is defined).
+- _Resolved-Inactive_: The incentive has been deactivated and its rules will not process.
+
+Incentive Rules can be in one of three statuses:
+
+- _Pending-Deploy_: The rule is undergoing deployment.
+- _Open-Active_: The rule is active and will process if its incentive is active and inside the timebox (if any).
+- _Resolved-Inactive_: The rule has been deactivated and will not process.

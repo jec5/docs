@@ -20,6 +20,7 @@
               "design/programs",
               "design/datasets",
               "design/segments",
+              "design/rewards",
               "design/incentives-config",
               "design/products",
               "design/stores"
