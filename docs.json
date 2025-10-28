@@ -31,7 +31,8 @@
             "icon": "play",
             "pages": [
               "runtime/members",
-              "runtime/sales"
+              "runtime/sales",
+              "runtime/ledger-entries"
             ]
           }
         ]

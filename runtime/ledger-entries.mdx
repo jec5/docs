@@ -1,0 +1,37 @@
+---
+title: "Ledger Entries"
+---
+
+Ledger entries record every accrual and deduction of currencies in your program. Their purpose is to update a member's currency balance. Positive ledger entries are often assigned expiration dates. Ledger entries can be produced by incentive rules processing, redemptions, manual currency adjustments, and currency expiration.
+
+The main place you can inspect ledger entries is on a member's detail page. You can also find ledger entries on the items that created them, such as incentivized activities (e.g. sales) and redemptions.
+
+![Membercurrencyoverview Pn](/images/membercurrencyoverview.png)
+
+### Attributes
+
+Ledger entries have the following attributes:
+
+- _Type_: **Accrual** means a positive entry resulting from the processing of an incentive rule. **Redemption** means a negative entry resulting from a member redeeming currency for a reward. **Adjustment** means a manual addition or removal of currency by an admin. **Expiration** means a negative entry resulting from the expiration of an accrual or positive adjustment.
+- _Member_: The member whose balance was updated.
+- _Currency_: The currency corresponding to the balance that was updated.
+- _Incentive Rule_: If the entry is an accrual, this is the incentive rule which generated it.
+- _Sale_: If the entry is the result of an incentive rule on Sale, this is the corresponding sale.
+- _Event_: If the entry is the result of an incentive rule on Event, this is the corresponding event.
+- _Redemption_: If the entry is of type "Redemption", this is the corresponding redemption.
+- _Expiration Ledger Entry_: If the entry is of type "Expiration", this is the positive entry whose remaining balance has been expired.
+- _Member Balance Snapshot_: The resulting balance of the member immediately following the insertion of this entry.
+- _Currency Awarded_: The amount of currency added or removed.
+- _Currency Available_: The amount of currency still available for use (i.e. not already used or expired). For negative entries, this will always be 0.
+- _Currency Used_: The amount of currency that the member has used, such as in redemptions. For negative entries, this will always be blank.
+- _Currency Expired_: The amount of currency that was consumed due to expiration. For negative entries and positive entries prior their expiration date, this will be blank.
+- _Create DateTime_: The date and time at which the entry was inserted.
+- _Expiration Date Time_: The date and time at which the positive entry is set to expire. If blank, either the entry is a deduction or it does not expire.
+
+### Statuses
+
+Ledger entries can be in one of three statuses:
+
+- _Open-Available_: The entry is positive, has available balance and does not have an expiration date.
+- _Open-AvailableWithExpiry_: The entry is positive, has available balance and has an expiration date in the future.
+- _Resolved-Closed_: The entry is negative (redemption, expiration or negative adjustment) or the entry is positive with no available balance remaining.
