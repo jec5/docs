@@ -32,7 +32,8 @@
             "pages": [
               "runtime/members",
               "runtime/sales",
-              "runtime/ledger-entries"
+              "runtime/ledger-entries",
+              "runtime/redemptions"
             ]
           }
         ]
