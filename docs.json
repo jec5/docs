@@ -14,26 +14,26 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Design",
+            "group": "Build",
             "icon": "pencil-ruler",
             "pages": [
-              "design/programs",
-              "design/datasets",
-              "design/segments",
-              "design/rewards",
-              "design/incentives-config",
-              "design/products",
-              "design/stores"
+              "build/programs",
+              "build/datasets",
+              "build/segments",
+              "build/rewards",
+              "build/incentives-config",
+              "build/products",
+              "build/stores"
             ]
           },
           {
-            "group": "Runtime",
+            "group": "Run",
             "icon": "play",
             "pages": [
-              "runtime/members",
-              "runtime/sales",
-              "runtime/ledger-entries",
-              "runtime/redemptions"
+              "run/members",
+              "run/sales",
+              "run/ledger-entries",
+              "run/redemptions"
             ]
           }
         ]

@@ -8,6 +8,12 @@ The main place you can inspect ledger entries is on a member's detail page. You 
 
 ![Membercurrencyoverview Pn](/images/membercurrencyoverview.png)
 
+### Expiration
+
+Positive ledger entries can, optionally, be set to expire. Each entry has its own date and time of expiry. A ledger entry's expiration date and time are defined by the artefact which generated it, such as an incentive rule or a balance adjustment.
+
+When a ledger entry expires, all of its available (unconsumed) balance is zeroed out and recorded in the _Currency Expired_ column. A new, negative ledger entry of type "Expiration" is created to deduct the expired amount and balance the now-expired positive ledger.
+
 ### Attributes
 
 Ledger entries have the following attributes:
