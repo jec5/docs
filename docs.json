@@ -33,6 +33,7 @@
               "run/members",
               "run/sales",
               "run/ledger-entries",
+              "run/incentives-processing",
               "run/redemptions"
             ]
           }

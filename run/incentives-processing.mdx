@@ -1,0 +1,18 @@
+---
+title: "Incentive Processing"
+---
+
+When Fielo is notified of an incentivizable occurrence, such as a new Sale or Event, the system processes it to determine what, if any, reward the member associated with that occurrence should receive. [Incentive](/build/incentives-config) processing follows a series of eliminative steps:
+
+1. **Queue**: The occurrence enters a queue, to be processed in order of insertion (first in, first out). Depending on volume and network conditions, this can take a few seconds to a few minutes.
+2. **Data Sets**: Fielo evaluates whether the occurrence meets the criteria of any of the data sets that correspond to its object type. [Data set](/build/datasets) criteria serve as a first-level filter that can remove occurrences that are generally not incentivizable, such as sales originating from nonparticipating channels.
+3. **Incentive Eligibility**: The member's segment(s) and/or tier are checked against the incentives whose rules belong to the data set(s) identified in the previous step. Members can only be rewarded on incentives targeted to one of their segments or tiers, as well as those open to all members.
+4. **Incentive Rules**: The occurrence is evaluated against the criteria of the rules belonging to the data set(s) identified in step 2 and the eligible incentives identified in step 3.
+   - **No Competiton**: The member will be rewarded by all rules of type "No Competition" whose criteria have been met.
+   - **Best Option**: For all rules of type "Best Option" whose criteria have been met, only the one whose reward is most favorable to the member will be applied. Usually, this is the rule that awards the most currency. In the event multiple rules award the same amount, the rule with the more generous expiration policy prevails.
+
+### Incentive Results
+
+Post-processing, you have visibility on how an incentivizable occurrence, such as a sale or event, was processed by Fielo. Incentive results show which rewards were granted and which were discarded, including the reasons for each. You can find incentive results on the detail page of a processed occurrence, such as a sale or event with status of "Resolved-Processed".
+
+![Incentives Result Pn](/images/incentives-result.png)
