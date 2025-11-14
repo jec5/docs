@@ -1,0 +1,39 @@
+---
+title: "Redemption Ceiling Rules"
+---
+
+Redemption ceiling rules define how much currency a member can apply to a future purchase, or [Presale](/run/presales), such as in cashback programs. Only one rule can prevail on a presale.
+
+### Tiebreaker
+
+When multiple redemption ceiling rules apply to a single presale, the tiebreaker determines which rule will take precedence. **Lowest Wins** means the rule with the lowest ceiling will apply, while **Highest Wins** means the rule with the highest ceiling will apply.
+
+You can set a tiebreaker on each of your [Programs](/build/programs).
+
+### Add a Rule
+
+To add a redemption ceiling rule, navigate to the Redemption Ceiling Rules page and select **Create Redemption Ceiling Rule**. In addition to a name and description, incentives include the following attributes:
+
+- _Program_: Only members of this program will be rewarded through the incentive.
+- _Ceiling Amount_: The maximum amount of currency applicable to presales scoped to this rule.
+
+### Set Criteria
+
+Next, add criteria to specify which presales should fall under the rule:
+
+- _Criteria_: The criteria that the presale must meet in order for this rule to apply. Criteria are built upon presale attributes. For example, if your rule only applies to presales over \$50, the criterion will look something like `Net Amount greater than 50`.
+- _Criteria Logical Expression_: Determines whether **All criteria must match** for the rule to apply, or **Any criterion can match**.
+
+When your criteria are ready, click **Submit**.
+
+![Redemptionceilingrulecriteria Pn](/images/redemptionceilingrulecriteria.png)
+
+There is a deployment process that needs to complete before the rule officially becomes _Open-Active_. You can check its status on the Deployments page. Even when the deployment has finished, it may still take several more minutes for the status of your rule to reflect this.
+
+### Statuses
+
+Redemption Ceiling Rules can be in one of three statuses:
+
+- _Pending-Deploy_: The rule is undergoing deployment.
+- _Open-Active_: The rule will be applied to scoped presales.
+- _Resolved-Inactive_: The rule has been deactivated and will not be applied.

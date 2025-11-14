@@ -23,7 +23,8 @@
               "build/rewards",
               "build/incentives-config",
               "build/products",
-              "build/stores"
+              "build/stores",
+              "build/redemption-ceiling-rules"
             ]
           },
           {
