@@ -1,0 +1,32 @@
+---
+title: "Presales"
+---
+
+A presale represents a potential future sale that has not yet been finalized. You can think of it as a shopping cart that is pending checkout. It is used to evaluate Redemption Ceiling Rules.
+
+### Processing
+
+Presales are typically fed to Fielo from an external system of record via API.
+
+When a presale is registered into Fielo, it enters a queue which is cleared on a first-in, first-out basis. The presale is evaluated against the redemption ceiling rules of the program to which the customer belongs and the redemption ceiling is calculated.
+
+### Attributes
+
+For small-scale testing purposes, presales can be created from the Presales page. Presales have all of the attributes that [Sales](/run/sales) have, plus the following additional one:
+
+- _Redemption Ceiling Amount_: The maximum amount of currency applicable, were the presale to be finalized as a sale.
+
+### Redemption Ceiling Results
+
+Post-processing, you have visibility on how a presale was processed by Fielo. Redemption ceiling results show which rule prevailed and which were discarded, including the reasons. You can find the results on the detail page of a processed presale.
+
+![Redemptionceilingresults Pn](/images/redemptionceilingresults.png)
+
+### Statuses
+
+Presales can be in one of four statuses:
+
+- _Pending-Ready to Process_: The presale has entered the system and is waiting to be processed.
+- _Pending-Processing_: The presale is being processed against the redemption ceiling rules of the member's program.
+- _Resolved-Processed_: The presale has been successfully processed against the redemption ceiling rules of the member's program.
+- _Resolved-Withdrawn_: Presale processing was aborted either because the associated member's status is not _Open-Active_ or due to a system error.

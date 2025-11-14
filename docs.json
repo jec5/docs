@@ -34,7 +34,8 @@
               "run/sales",
               "run/ledger-entries",
               "run/incentives-processing",
-              "run/redemptions"
+              "run/redemptions",
+              "run/presales"
             ]
           }
         ]
