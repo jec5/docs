@@ -24,6 +24,7 @@
               "build/incentives-config",
               "build/products",
               "build/stores",
+              "build/caps",
               "build/redemption-ceiling-rules"
             ]
           },
