@@ -43,8 +43,20 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "openapi": "/api-reference/Loyalty-App-Open-API-Spec_Swagger.yaml"
+      },
+      {
+        "tab": "Changelog",
+        "groups": [
+          {
+            "group": "Changelog",
+            "icon": "calendar-week",
+            "pages": [
+              "/changelog"
+            ]
+          }
+        ]
       }
     ],
     "global": {
