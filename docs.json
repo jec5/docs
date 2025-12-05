@@ -72,9 +72,9 @@
           "icon": "book-open-cover"
         },
         {
-          "anchor": "Blog",
-          "href": "https://www.fielo.com/blog",
-          "icon": "newspaper"
+          "anchor": "Deployed on AWS",
+          "href": "https://aws.amazon.com/marketplace/pp/prodview-dz2mjagz744k4",
+          "icon": "amazon"
         }
       ]
     }
