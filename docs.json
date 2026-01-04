@@ -45,7 +45,7 @@
             "icon": "scale-balanced",
             "pages": [
               "trust/security",
-              "run/privacy"
+              "trust/privacy"
             ]
           }
         ]
