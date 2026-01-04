@@ -1,0 +1,29 @@
+---
+title: "Security"
+---
+
+Protecting the integrity of your loyalty program data is our highest priority. Fielo Loyalty, built on Pega Launchpad, employs a multi-layered security strategy to ensure that all data, including member and transactional data, remains secure.
+
+### Infrastructure
+
+As a cloud application built on Pega Launchpad, we inherit enterprise-grade security controls from a platform that is **zero-trust architected** and **secure by default**.
+
+- **Physical Security**: Data is hosted in secure, Tier-1 cloud environments with 24/7 monitoring and physical access controls.
+- **Network Isolation**: We utilize Virtual Private Clouds (VPCs) and advanced firewalls to isolate program data from unauthorized external access.
+- **Compliance**: Pega Launchpad enjoys [over 20 security certifications](https://www.pega.com/trust), including **ISO 27001** and **SOC 2**.
+
+### Data Protection
+
+We employ industry-standard encryption protocols to safeguard sensitive information throughout its lifecycle.
+
+- **Encryption in Transit**: All data moving between external systems of record and our API is encrypted using TLS 1.2+.
+- **Encryption at Rest**: Databases storing member attributes, external IDs, and transaction histories are encrypted using AES-256.
+- **Role-Based Access Control (RBAC)**: Administratively, you can manage who has the authority to view each area of the app, ensuring the principle of least privilege.
+
+### AI
+
+When leveraging Large Language Models (LLMs) to generate insights and recommendations, we adhere to strict security protocols:
+
+- **No Training Policy**: We use enterprise-tier API agreements with LLM providers. Your proprietary program data and member information are _never_ used to train the provider's foundation models.
+- **Data Sandboxing**: LLM processing occurs within a secure, ephemeral environment. Data is sent for the specific task and is not stored by the LLM provider beyond the immediate session (Zero Data Retention where applicable).
+- **Prompt Security**: All inputs sent to AI models are sanitized to prevent prompt injection attacks that could compromise application logic.

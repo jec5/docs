@@ -39,6 +39,14 @@
               "run/redemptions",
               "run/presales"
             ]
+          },
+          {
+            "group": "Trust",
+            "icon": "scale-balanced",
+            "pages": [
+              "trust/security",
+              "run/privacy"
+            ]
           }
         ]
       },
