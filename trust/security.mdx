@@ -25,5 +25,6 @@ We employ industry-standard encryption protocols to safeguard sensitive informat
 When leveraging Large Language Models (LLMs) to generate insights and recommendations, we adhere to strict security protocols:
 
 - **No Training Policy**: We use enterprise-tier API agreements with LLM providers. Your proprietary program data and member information are _never_ used to train the provider's foundation models.
-- **Data Sandboxing**: LLM processing occurs within a secure, ephemeral environment. Data is sent for the specific task and is not stored by the LLM provider beyond the immediate session (Zero Data Retention where applicable).
-- **Prompt Security**: All inputs sent to AI models are sanitized to prevent prompt injection attacks that could compromise application logic.
+- **No Data Logging**: LLM processing occurs within a secure, ephemeral environment. Data is sent for the specific task and is not stored by the LLM provider beyond the immediate session (Zero Data Retention where applicable).
+- **Prompt Security**: When sending a prompt to a public LLM, content filtering applies to detect and prevent harmful content in prompts and completions.
+- **Consistent Performance**: With every release, AI models are verified to ensure consistent performance and efficiency.
