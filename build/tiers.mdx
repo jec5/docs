@@ -1,0 +1,54 @@
+---
+title: "Tiers"
+description: "Coming soon"
+---
+
+Tiers are a great way to create exclusivity and give members clear milestones to reach in your loyalty program. Create a set of identifiable thresholds that progressively level up a member's experience with your brand.
+
+### Define a Measure
+
+A tier belongs to one program. A member can only have one tier at a time.
+
+Before creating individual tiers, you must first define how your tier thresholds will be measured.
+
+Measures can be:
+
+- A numeric field from Sale, such as Total Amount or Incentivizable Amount
+- A currency balance
+
+Next, you define a lookback period (in days). The lookback period is the period over which the measure you selected will be evaluated.
+
+### Set a Maintenance Policy
+
+You can define a Stability Period (in days), which is how long a member can stay in a tier before being reevaluated.
+
+If a member is not upgraded within this period of time, he or she is reevaluated and reclassified according to their performance over the lookback period.
+
+### Add a Tier
+
+For each tier, you define a threshold for tier entry (based on the measure you've selected). One tier is allowed to not have a threshold, which means it is the base (or default) tier that all members are eligible for if they haven't met the threshold for any other tier.
+
+### Upgrade
+
+Measurement for tier upgrades occurs in real time. Whenever a sale is registered under a member's name (if tiering based on Sale) or whenever the relevant currency is accrued (if tiering based on a currency balance), Fielo evaluates whether a new tier threshold has been reached. If a new threshold has indeed been reached, the member is upgraded to the new tier immediately.
+
+Members can be rewarded when they are upgraded to a new tier. Tier upgrade rewards are typically differentiated by tier.
+
+### Downgrade
+
+Tier downgrade occurs once per day. Each day, members whose current Tier Reevaluation Date is today are evaluated to determine whether they are to remain in their current tier or be downgraded.
+
+## Tier Movement History
+
+Each time a member is assigned a tier, either by upgrade or downgrade, the following data are captured:
+
+- Previous Tier
+- New Tier
+- Tier Entry Date
+- Tier Reevaluation Date (Tier Entry Date + Stability Period defined for the program)
+- Whether it was an upgrade or a downgrade
+- Is Current (indicates whether this is the most recent tier update)
+
+### Statuses
+
+A tier can be active or inactive. Inactive tiers cannot be assigned to members (members already in the tier that became inactive can remain there until that tier expires for them).

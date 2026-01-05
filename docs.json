@@ -25,7 +25,8 @@
               "build/products",
               "build/stores",
               "build/caps",
-              "build/redemption-ceiling-rules"
+              "build/redemption-ceiling-rules",
+              "build/tiers"
             ]
           },
           {
