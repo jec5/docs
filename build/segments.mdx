@@ -12,12 +12,24 @@ To add a segment, navigate to the Segments page and select **Create Segment**.
 
 Segments can be one of two types:
 
-- **List**: The segment consists of a list of members that belong to the segment. The list can be updated administratively or via automation. This type of segment is typically used when segment membership is managed outside of Fielo (such as by a Customer Data Platform) or is discretionary (such as a "VIP Members" list).
 - **Criteria**: Segment membership is defined dynamically based on member attributes and is updated on-the-fly. For example, if a member performs an activity that is incentivized only for members who have provided a mobile phone number, Fielo will verify in real time whether the member has indeed provided one. Later on, if the member performs the same activity, Fielo will check once again during incentive processing to see if the member is part of that segment.
+- **List**: The segment consists of a list of members that belong to the segment. The list can be updated administratively or via automation. This type of segment is typically used when segment membership is managed outside of Fielo (such as by a Customer Data Platform) or is discretionary (such as a "VIP Members" list).
 
 <Warning>
   Once selected, a segment's type cannot be changed.
 </Warning>
+
+![Segment Awaiting Criteria](/images/segment-awaiting-criteria.png)
+
+### Manage Criteria Segment Membership
+
+A criteria segment requires one or more conditions, or criteria, that define which members belong to the segment. After you've created a criteria segment, you can add a criterion.
+
+![Segment Define Criteria](/images/segment-define-criteria.png)
+
+After you've added your criteria, specify whether **All criteria must match** for a member to be part of the segment, or **Any criterion can match**.
+
+When ready, you can activate your segment from its detail page. Under the criteria list, click **Submit**. It can take up to 15 minutes for your segment to become active.
 
 ### Manage List Segment Membership
 
@@ -27,15 +39,14 @@ You can quickly add and remove members administratively using external IDs. To a
 
 You can also modify the segments of a member directly from the member's detail page.
 
-### Activate a Segment
-
-Once you've defined your segment's membership, you can go ahead and activate it. From the three-dot menu, choose "Mark as active".
+Once you've defined your segment's list, you can go ahead and activate it. From the three-dot menu, choose "Mark as active".
 
 ### Statuses
 
 Segments can be in one of three statuses:
 
 - _Open-In progress_: The segment has been created, but not yet activated.
+- _Pending-Deploy_: The segment has been submitted for activation and is undergoing deployment. This status applies to criteria segments only.
 - _Open-Active_: The segment can be assigned to incentives, and such incentives will only be processed for members who belong to the segment.
 - _Resolved-Inactive_: The segment is not in use and cannot be applied to incentives.
 
