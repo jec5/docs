@@ -71,6 +71,11 @@
     "global": {
       "anchors": [
         {
+          "anchor": "Features",
+          "href": "https://docs.fieloloyalty.com/features",
+          "icon": "list-check"
+        },
+        {
           "anchor": "Book a Demo",
           "href": "https://www.fielo.com/contact-us",
           "icon": "laptop"
