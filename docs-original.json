@@ -77,6 +77,11 @@
           "icon": "laptop"
         },
         {
+          "anchor": "Features",
+          "page": "/features",
+          "icon": "list-check"
+        },
+        {
           "anchor": "Resource Center",
           "href": "https://www.fielo.com/resources",
           "icon": "book-open-cover"
