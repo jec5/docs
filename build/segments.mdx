@@ -6,9 +6,22 @@ Segments are groupings of members that you can use to target incentives to speci
 
 To add a segment, navigate to the Segments page and select **Create Segment**.
 
-### Add and Remove Members
+![Create Segment](/images/create-segment.png)
 
-Segment lists can be managed via API, as well as manually.
+### Segment Type
+
+Segments can be one of two types:
+
+- **List**: The segment consists of a list of members that belong to the segment. The list can be updated administratively or via automation. This type of segment is typically used when segment membership is managed outside of Fielo (such as by a Customer Data Platform) or is discretionary (such as a "VIP Members" list).
+- **Criteria**: Segment membership is defined dynamically based on member attributes and is updated on-the-fly. For example, if a member performs an activity that is incentivized only for members who have provided a mobile phone number, Fielo will verify in real time whether the member has indeed provided one. Later on, if the member performs the same activity, Fielo will check once again during incentive processing to see if the member is part of that segment.
+
+<Warning>
+  Once selected, a segment's type cannot be changed.
+</Warning>
+
+### Manage List Segment Membership
+
+List segments can be managed via API, as well as manually.
 
 You can quickly add and remove members administratively using external IDs. To add or remove members from a segment, access the three-dot menu from the details pane, select **Add Members** or **Remove Members** and enter the external IDs of the members.
 
