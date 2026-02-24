@@ -7,6 +7,9 @@
     "light": "#00B5F1",
     "dark": "#0668C9"
   },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
   "favicon": "/fielo-favicon-4colors.png",
   "navigation": {
     "tabs": [
@@ -15,6 +18,7 @@
         "groups": [
           {
             "group": "Design",
+            "root": "index",
             "icon": "object-group",
             "pages": [
               "design/designer"
