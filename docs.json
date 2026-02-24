@@ -59,6 +59,25 @@
         ]
       },
       {
+        "tab": "Use Cases",
+        "groups": [
+          {
+            "group": "Program Types",
+            "icon": "hand-holding-heart",
+            "pages": [
+              "program-types/points"
+            ]
+          },
+          {
+            "group": "Campaign Types",
+            "icon": "bullhorn",
+            "pages": [
+              "campaign-types/welcome-reward"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "API Reference",
         "openapi": "/api-reference/Loyalty-App-Open-API-Spec_Swagger.yaml"
       },
