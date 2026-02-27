@@ -12,14 +12,38 @@
   },
   "favicon": "/fielo-favicon-4colors.png",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Features",
+          "icon": "list-check",
+          "href": "/features"
+        },
+        {
+          "anchor": "Book a Demo",
+          "icon": "laptop",
+          "href": "https://www.fielo.com/contact-us"
+        },
+        {
+          "anchor": "Resource Center",
+          "icon": "book-open-cover",
+          "href": "https://www.fielo.com/resources"
+        },
+        {
+          "anchor": "Deployed on AWS",
+          "icon": "amazon",
+          "href": "https://aws.amazon.com/marketplace/pp/prodview-dz2mjagz744k4"
+        }
+      ]
+    },
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Home",
         "groups": [
           {
             "group": "Design",
-            "root": "index",
             "icon": "object-group",
+            "root": "index",
             "pages": [
               "design/designer"
             ]
@@ -69,14 +93,26 @@
             "group": "Program Types",
             "icon": "hand-holding-heart",
             "pages": [
-              "program-types/points"
+              "program-types/points",
+              "program-types/cashback",
+              "program-types/tiers-and-benefits"
             ]
           },
           {
             "group": "Campaign Types",
             "icon": "bullhorn",
             "pages": [
-              "campaign-types/welcome-reward"
+              "campaign-types/welcome-reward",
+              "campaign-types/birthday-reward",
+              "campaign-types/tier-upgrade",
+              "campaign-types/program-anniversary",
+              "campaign-types/reactivation",
+              "campaign-types/currency-multiplier",
+              "campaign-types/spend-threshold",
+              "campaign-types/product-mix",
+              "campaign-types/location",
+              "campaign-types/channel",
+              "campaign-types/payment-method"
             ]
           }
         ]
@@ -97,31 +133,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Features",
-          "href": "/features",
-          "icon": "list-check"
-        },
-        {
-          "anchor": "Book a Demo",
-          "href": "https://www.fielo.com/contact-us",
-          "icon": "laptop"
-        },
-        {
-          "anchor": "Resource Center",
-          "href": "https://www.fielo.com/resources",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Deployed on AWS",
-          "href": "https://aws.amazon.com/marketplace/pp/prodview-dz2mjagz744k4",
-          "icon": "amazon"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/fielo-light.png",
