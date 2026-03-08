@@ -15,8 +15,8 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Features",
-          "icon": "list-check",
+          "anchor": "AI Features",
+          "icon": "robot",
           "href": "/features"
         },
         {
