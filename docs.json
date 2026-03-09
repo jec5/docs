@@ -43,7 +43,6 @@
           {
             "group": "Design",
             "icon": "object-group",
-            "root": "index",
             "pages": [
               "design/designer"
             ]
