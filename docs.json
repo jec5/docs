@@ -15,8 +15,8 @@
     "global": {
       "anchors": [
         {
-          "anchor": "AI Features",
-          "icon": "robot",
+          "anchor": "Platform Capabilities",
+          "icon": "list-check",
           "href": "/features"
         },
         {
@@ -90,6 +90,13 @@
       {
         "tab": "Use Cases",
         "groups": [
+          {
+            "group": "Overview",
+            "icon": "list-ul",
+            "pages": [
+              "use-cases"
+            ]
+          },
           {
             "group": "Program Types",
             "icon": "hand-holding-heart",
