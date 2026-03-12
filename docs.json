@@ -74,7 +74,8 @@
               "run/ledger-entries",
               "run/incentives-processing",
               "run/redemptions",
-              "run/presales"
+              "run/presales",
+              "run/analytics"
             ]
           },
           {
