@@ -4,7 +4,15 @@ title: "Incentives"
 
 Incentives contain the rules that define how members get rewarded for participation in your program. They can be open-ended or timebound. They can be for all members or only a subset of members. They can reward outcomes, like sales or tier upgrades, or on a time schedule, like birthdays or program anniversaries. Rewards can take the form of virtual currency, like points, or instant rewards, like catalog items or vouchers.
 
-### Configure an Incentive
+## Configure an Incentive with AI
+
+You can brainstorm and create an incentive by chatting with Fielo Copilot. On the right side of the Incentives page, simply start a conversation around your incentive idea.
+
+<video src="/videos/incetivesviaai3.mp4" controls={true} />
+
+Copilot will ask for any missing information and confirm all details before creating your incentive. Once your incentive is created, you'll need to review it and then activate it.
+
+## Configure an Incentive Manually
 
 To start building an incentive, navigate to the Incentives page and select **Create Incentive**. In addition to a name and description, incentives include the following attributes:
 
@@ -48,9 +56,9 @@ Instant rewards require the following:
 - _Reward_: If "Fixed Value" is selected, this is the catalog reward that will be granted.
 - _Source Reward Field_: If "Specified by Field" is selected, this is the attribute that will indicate the catalog reward to be granted.
 
-### Activate an Incentive
+## Activate an Incentive
 
-Once your rules are ready, you can activate your incentive from its detail page. Under the Incentive Rules list, click **Submit**.
+Once your rules are ready, you can activate your incentive from its detail page. Review the pending step(s) and click **Submit**.
 
 ![Activate Incentive Button Pn](/images/activate-incentive-button.png)
 
@@ -60,16 +68,18 @@ Whenever you make a change to the criteria of an incentive rule, a new deploymen
 
 For incentives with a start date/time in the future, be assured that even in _Open-Active_ status, your incentive rules will only begin granting rewards at the defined start date/time.
 
-### Statuses
+## Statuses
 
 Incentives can be in one of three statuses:
 
+- _New_: The incentive was created via Fielo Copilot and requires review prior to activation.
 - _Pending-Define Incentive Rules_: The incentive is in the process of being built. It needs to be activated before the rules will begin processing.
 - _Open-Active_: The incentive has been activated and its rules will process (within the timebox, if one is defined).
 - _Resolved-Inactive_: The incentive has been deactivated and its rules will not process.
 
 Incentive Rules can be in one of three statuses:
 
+- _New_: The rule was created via Fielo Copilot and requires review prior to activation.
 - _Pending-Deploy_: The rule is undergoing deployment.
 - _Open-Active_: The rule is active and will process if its incentive is active and inside the timebox (if any).
 - _Resolved-Inactive_: The rule has been deactivated and will not process.
