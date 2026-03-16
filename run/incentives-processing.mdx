@@ -1,6 +1,26 @@
 ---
-title: "Incentive Processing"
+title: "Incentive Runtime"
 ---
+
+### AI Insights
+
+Once an incentive is activated, you can access its insights. AI insights include a summary of the incentive's mechanics, the incentive's participation trends, and recommendations on how it might be improved.
+
+<Frame>
+  ![Ai Insights Incentives](/images/ai-insights-incentives.png)
+</Frame>
+
+### AI Enhancement
+
+You can improve your incentives with Fielo Copilot. Click on the purple ✨ icon on the right side of an incentive detail page and start a conversation.
+
+<Frame>
+  ![Edit Incentive Ai](/images/edit-incentive-ai.png)
+</Frame>
+
+Copilot will ask for any missing information and confirm all details before enhancing your incentive. Once your enhanced incentive rules are created, you'll need to review and activate them.
+
+### Incentive Processing
 
 When Fielo is notified of an incentivizable occurrence, such as a new Sale or Event, the system processes it to determine what, if any, reward the member associated with that occurrence should receive. [Incentive](/build/incentives-config) processing follows a series of eliminative steps:
 
@@ -8,7 +28,7 @@ When Fielo is notified of an incentivizable occurrence, such as a new Sale or Ev
 2. **Data Sets**: Fielo evaluates whether the occurrence meets the criteria of any of the data sets that correspond to its object type. [Data Set](/build/datasets) criteria serve as a first-level filter that can remove occurrences that are generally not incentivizable, such as sales originating from nonparticipating channels. [Caps](/build/caps) are also enforced on this step.
 3. **Incentive Eligibility**: The member's segment(s) and/or tier are checked against the incentives whose rules belong to the data set(s) identified in the previous step. Members can only be rewarded on incentives targeted to one of their segments or tiers, as well as those open to all members.
 4. **Incentive Rules**: The occurrence is evaluated against the criteria of the rules belonging to the data set(s) identified in step 2 and the eligible incentives identified in step 3.
-   - **No Competiton**: The member will be rewarded by all rules of type "No Competition" whose criteria have been met.
+   - **No Competition**: The member will be rewarded by all rules of type "No Competition" whose criteria have been met.
    - **Best Option**: For all rules of type "Best Option" whose criteria have been met, only the one whose reward is most favorable to the member will be applied. Usually, this is the rule that awards the most currency. In the event multiple rules award the same amount, the rule with the more generous expiration policy prevails.
 
 ### Incentive Results
