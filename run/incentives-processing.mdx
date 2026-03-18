@@ -2,7 +2,7 @@
 title: "Incentive Runtime"
 ---
 
-### AI Insights
+## AI Insights
 
 Once an incentive is activated, you can access its insights. AI insights include a summary of the incentive's mechanics, the incentive's participation trends, and recommendations on how it might be improved.
 
@@ -10,7 +10,7 @@ Once an incentive is activated, you can access its insights. AI insights include
   ![Ai Insights Incentives](/images/ai-insights-incentives.png)
 </Frame>
 
-### AI Enhancement
+## AI Enhancement
 
 You can improve your incentives with Fielo Copilot. Click on the purple ✨ icon on the right side of an incentive detail page and start a conversation.
 
@@ -20,7 +20,30 @@ You can improve your incentives with Fielo Copilot. Click on the purple ✨ icon
 
 Copilot will ask for any missing information and confirm all details before enhancing your incentive. Once your enhanced incentive rules are created, you'll need to review and activate them.
 
-### Incentive Processing
+## Autonomous AI Optimization (Coming Soon)
+
+Once your incentive is in full swing, Fielo Copilot can make sure it stays performant, automatically. On each of your incentives, you control which kinds of optimizations Fielo can carry out on the fly, require admin approval, or are simply admin-only. All autonomous activities are recorded on the Recent Updates list, including a timestamp and the name of the approver (when applicable).
+
+<Frame>
+  ![Autonomous Ai Settings Draft](/images/autonomous-ai-settings-draft.png)
+</Frame>
+
+### Optimization Types
+
+- **Extend or shorten duration**: AI can change the incentive start date and end date.
+- **Adjust currency reward values**: When currency rewards are being given, reward values can be changed. If no currency rewards are being given, no optimizations of this type are made.
+- **Modify expiration policy**: When currency rewards that expire are being given, the expiration policy can be modified. Currency rewards that don't expire are excluded from this type of optimization.
+- **Add or remove rewards**: AI can add or remove currency rewards and instant rewards.
+- **Adjust rule criteria**: AI can make changes to the comparators and values of existing rule criteria, but not source fields. For example, AI can change the criterion `Total Amount > 100` to `Total Amount >= 150`, but cannot change the "Total Amount" field to different one.
+- **Change targeted segments**: AI can add and remove segments to and from the incentive.
+
+### Trust Levels
+
+- **Off**: No autonomous activity of this type permitted.
+- **Ask Me**: Ask for approval for activities of this type. When AI recommends an activity of this type, all registered Loyalty Managers are informed by email. The activity can be approved or rejected on the AI Suggestions for Manual Review table on the corresponding incentive page.
+- **Automate**: AI is free to execute activities of this type autonomously.
+
+## Incentive Processing
 
 When Fielo is notified of an incentivizable occurrence, such as a new Sale or Event, the system processes it to determine what, if any, reward the member associated with that occurrence should receive. [Incentive](/build/incentives-config) processing follows a series of eliminative steps:
 
@@ -31,7 +54,7 @@ When Fielo is notified of an incentivizable occurrence, such as a new Sale or Ev
    - **No Competition**: The member will be rewarded by all rules of type "No Competition" whose criteria have been met.
    - **Best Option**: For all rules of type "Best Option" whose criteria have been met, only the one whose reward is most favorable to the member will be applied. Usually, this is the rule that awards the most currency. In the event multiple rules award the same amount, the rule with the more generous expiration policy prevails.
 
-### Incentive Results
+## Incentive Results
 
 Post-processing, you have visibility on how an incentivizable occurrence, such as a sale or event, was processed by Fielo. Incentive results show which rewards were granted and which were discarded, including the reasons for each. You can find incentive results on the detail page of a processed occurrence, such as a sale or event with status of "Resolved-Processed".
 
