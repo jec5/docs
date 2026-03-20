@@ -97,32 +97,6 @@
             "pages": [
               "use-cases"
             ]
-          },
-          {
-            "group": "Program Types",
-            "icon": "hand-holding-heart",
-            "pages": [
-              "program-types/points",
-              "program-types/cashback",
-              "program-types/tiers-and-benefits"
-            ]
-          },
-          {
-            "group": "Campaign Types",
-            "icon": "bullhorn",
-            "pages": [
-              "campaign-types/welcome-reward",
-              "campaign-types/birthday-reward",
-              "campaign-types/tier-upgrade",
-              "campaign-types/program-anniversary",
-              "campaign-types/reactivation",
-              "campaign-types/currency-multiplier",
-              "campaign-types/spend-threshold",
-              "campaign-types/product-mix",
-              "campaign-types/location",
-              "campaign-types/channel",
-              "campaign-types/payment-method"
-            ]
           }
         ]
       },
