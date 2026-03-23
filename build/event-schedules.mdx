@@ -1,0 +1,36 @@
+---
+title: "Event Schedules"
+---
+
+Event Schedules create Events on or before key dates on members' profiles, such as birthdays and program anniversaries. This enables you to configure incentive rules that reward members around such commemorative dates.
+
+## Add an Event Schedule
+
+To configure an event schedule, navigate to the Event Schedules page and select **\+**. In addition to a name and description, event schedules have the following attributes:
+
+- _Type_: **Anniversary** means that events will be generated on or before members' program anniversary (_Join Date Time_ field). **Birthday** means that events will be generated on or before members' birthday (_Date of Birth_ field).
+- _Offset (in days)_: The number of days ahead of the commemorative date that events should be generated. To have events created on the day of, enter `0`.
+
+<Frame>
+  ![Event Schedule Birthday](/images/event-schedule-birthday.png)
+</Frame>
+
+## Schedule Event Creation
+
+By default, events are created daily at 3:00 AM GMT.
+
+To change the run time or frequency, click on your initials on the top right and choose _Administration_. On the left navigation, under Configurations, select _Application Configuration_.
+
+Click the three-dots near the top right of the page and choose _Override_.
+
+<Frame>
+  ![Event Scheduler Job](/images/event-scheduler-job.png)
+</Frame>
+
+Make the desired changes and save.
+
+<Warning>
+  If event creation is scheduled for more than once per day, incentive rules may reward members multiple times for the same commemorative date. Typically, this is only desirable when testing.
+
+  During runtime, schedule this job to run, at most, once daily.
+</Warning>

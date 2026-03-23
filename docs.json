@@ -62,7 +62,8 @@
               "build/caps",
               "build/redemption-ceiling-rules",
               "build/tiers",
-              "build/badges"
+              "build/badges",
+              "build/event-schedules"
             ]
           },
           {
