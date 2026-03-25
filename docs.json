@@ -15,11 +15,6 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Platform Capabilities",
-          "icon": "list-check",
-          "href": "/features"
-        },
-        {
           "anchor": "Book a Demo",
           "icon": "laptop",
           "href": "https://www.fielo.com/contact-us"
@@ -40,6 +35,14 @@
       {
         "tab": "Guides",
         "groups": [
+          {
+            "group": "Overview",
+            "icon": "list-ul",
+            "pages": [
+              "features",
+              "use-cases"
+            ]
+          },
           {
             "group": "Design",
             "icon": "object-group",
@@ -90,18 +93,6 @@
         ]
       },
       {
-        "tab": "Use Cases",
-        "groups": [
-          {
-            "group": "Overview",
-            "icon": "list-ul",
-            "pages": [
-              "use-cases"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "API Reference",
         "openapi": "/api-reference/Loyalty-App-Open-API-Spec_Swagger.yaml"
       },
@@ -126,14 +117,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Get support",
-        "href": "https://fieloww.atlassian.net/servicedesk"
+        "label": "Book a chat",
+        "href": "https://calendar.app.google/8AmvRp344mSFXe6B7"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Book a chat",
-      "href": "https://calendar.app.google/8AmvRp344mSFXe6B7"
+      "label": "Get support",
+      "href": "https://fieloww.atlassian.net/servicedesk"
     }
   },
   "footer": {
