@@ -20,11 +20,6 @@
           "href": "https://www.fielo.com/contact-us"
         },
         {
-          "anchor": "Resource Center",
-          "icon": "book-open-cover",
-          "href": "https://www.fielo.com/resources"
-        },
-        {
           "anchor": "Deployed on AWS",
           "icon": "amazon",
           "href": "https://aws.amazon.com/marketplace/pp/prodview-dz2mjagz744k4"
