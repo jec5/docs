@@ -1,0 +1,67 @@
+---
+title: "Churn Prevention"
+---
+
+Coming soon
+
+Churn Prevention continuously watches for members who are drifting away from your program and automatically generates personalized reactivation incentives to win them back — no manual campaign building required.
+
+### Define At-Risk Criteria
+
+To get started, a Loyalty Manager defines the criteria that determine what counts as an at-risk member. These criteria are configured at the program level and can reflect signals such as:
+
+- No transaction within a defined number of days
+- Currency balance approaching expiration with no recent redemption activity
+- A tier at risk of downgrade
+
+Any member meeting one or more of these criteria becomes a candidate for reactivation.
+
+### Configure Capacity Settings
+
+Churn Prevention runs on a configurable schedule (for example, weekly) and includes the following program-level settings to keep its output predictable and cost-controlled:
+
+- _Member Cap Per Run_: The maximum number of members that can receive a reactivation incentive in a single run. This bounds both AI cost and incentive catalog growth per cycle.
+- _Recommendation Cooldown (days)_: Members who've already received a reactivation recommendation within this window are excluded from selection, so the same members aren't targeted run after run.
+- _Incentive Duration (days)_: The mandatory timebox applied to every reactivation incentive that Churn Prevention generates.
+
+### Batch Identification and Selection
+
+On each scheduled run, Fielo identifies every member currently meeting the at-risk criteria, then removes any members inside the recommendation cooldown window.
+
+- If the number of eligible members is at or below the Member Cap Per Run, all of them are selected.
+- If the eligible population exceeds the cap, a random sample of members, up to the cap, is selected. Randomization, combined with the cooldown exclusion, ensures the at-risk population is rotated through fairly across successive runs rather than always targeting the same members.
+
+### Behavioral Aggregation
+
+For each selected member, Fielo aggregates relevant transactional and profile data into a behavioral summary — including lapse duration, historical purchase categories, average spend, tier history, and prior incentive participation. Raw transactional records are never passed to the AI model; only this aggregated summary is used.
+
+### AI-Generated Reactivation Incentives
+
+Using each member's behavioral summary and your existing incentive catalog, Fielo AI proposes a personalized reactivation incentive for that member — including rule type, reward, threshold, timebox, and a rationale grounded in the member's specific behavior history. The existing catalog is referenced so proposals don't duplicate incentives you already have in place.
+
+Because proposals are generated per run and bounded by the Member Cap Per Run rather than by total program size, AI usage stays predictable regardless of how large your at-risk population grows.
+
+### Deduplication
+
+Before proposals reach your review queue (or are auto-activated), Fielo consolidates near-identical proposals generated within the same run. When two or more members' proposed incentives share materially equivalent parameters — the same rule type, comparable reward value and threshold, and the same expiration policy — they're merged into a single incentive that targets all affected members via a shared list segment.
+
+- Equivalence tolerance (for example, reward values within a defined percentage of one another) is governed by a configurable rule, so consolidation behavior stays predictable and auditable.
+- Each member's recommendation history is tracked individually, even when the underlying incentive has been consolidated — every member still receives their own recommendation and their own participation tracking.
+- Consolidated proposals in the review queue display the full list of targeted members along with each member's individual behavioral rationale.
+
+### Review and Approve
+
+Proposals appear in a review queue on the program page, grouped by run. From there, a Loyalty Manager can inspect each proposal's rationale, edit its parameters, and approve or reject proposals individually or in bulk.
+
+If a program is configured for auto-activation, this review step is skipped and all proposals are activated automatically, with the activity recorded on the program's activity log.
+
+### Activation and Delivery
+
+Once approved (or auto-activated), each incentive is created and activated, targeted exclusively to its member(s) via a list segment. Every incentive carries the mandatory timebox defined by the Incentive Duration setting, with its End Date Time set automatically at creation. The recommendation is then dispatched to each targeted member through your configured delivery channel(s) and logged to their recommendation history.
+
+### Lifecycle Management
+
+Churn Prevention keeps your incentive catalog tidy by automatically retiring incentives it generates:
+
+- **On timebox expiry**: The incentive reaches its End Date Time and stops processing. A cleanup job transitions it to _Resolved-Inactive_ and deactivates its associated list segment.
+- **On participation**: When a targeted member participates in the incentive, that member is removed from the incentive's segment. Once every targeted member has either participated or the observation window has closed, the incentive is deactivated early.
