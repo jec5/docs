@@ -63,7 +63,7 @@
               "build/badges",
               "build/event-schedules",
               "build/member-experiences",
-              "build/untitled-page"
+              "build/b2b-portal"
             ]
           },
           {
@@ -77,9 +77,9 @@
               "run/redemptions",
               "run/presales",
               "run/analytics",
-              "run/untitled-page-2",
-              "run/untitled-page",
-              "run/untitled-page-3"
+              "run/churn-prevention",
+              "run/uplift-prediction",
+              "run/next-best-action"
             ]
           },
           {
