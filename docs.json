@@ -62,7 +62,8 @@
               "build/tiers",
               "build/badges",
               "build/event-schedules",
-              "build/member-experiences"
+              "build/member-experiences",
+              "build/untitled-page"
             ]
           },
           {
@@ -75,7 +76,10 @@
               "run/incentives-processing",
               "run/redemptions",
               "run/presales",
-              "run/analytics"
+              "run/analytics",
+              "run/untitled-page-2",
+              "run/untitled-page",
+              "run/untitled-page-3"
             ]
           },
           {
