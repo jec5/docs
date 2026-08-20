@@ -1,0 +1,65 @@
+---
+title: "Next Best Action"
+---
+
+Coming soon
+
+Next Best Action helps partners and employees stay engaged with your program by telling them, in the moment, exactly what to do next and what they stand to earn for doing it. Rather than browsing the full incentive catalog, a member is shown a single, personalized recommendation drawn from their own participation history in the program.
+
+### How It Works
+
+Next Best Action is triggered by member engagement. Whenever a member interacts with a touchpoint you've connected, such as a partner portal or an employee platform, that touchpoint calls the Next Best Action endpoint, passing along the member and the context of what they're doing (for example, logging in, viewing a deal, or completing part of a training path).
+
+Fielo evaluates the request in real time and returns a recommendation for that member on the spot.
+
+### Selecting the Next Best Action
+
+To identify a member's next best action, Fielo looks at the incentive rules the member is currently eligible for across the program, along with the member's progress and participation history to date. From these, it identifies the single incentive rule the member is best positioned to complete next.
+
+For example:
+
+- A partner who has registered 3 of the 5 deals needed to unlock a bonus is recommended to register another deal.
+- An employee who has completed 4 of 5 modules in a certification path is recommended to complete the final module.
+
+Incentive rules a member has already completed, or for which they are no longer eligible, will not be recommended.
+
+### Earn Potential
+
+Alongside the recommended action, Fielo calculates the member's earn potential: what they stand to receive by completing it. This is based on the incentive rule's reward configuration together with the member's current progress toward its threshold.
+
+### Recommendation Delivery
+
+Once generated, a recommendation is dispatched to the member through one or more delivery channels:
+
+- _External Notification_: A call is made to a webhook you configure, allowing you to surface the recommendation inside your own touchpoint.
+- _Email_: The recommendation is sent to the member's registered email address.
+
+You can enable one or both channels for your program.
+
+### Recommendation History
+
+Every recommendation is recorded on the member's detail page. Each entry captures:
+
+- The recommended incentive rule
+- The date and time the recommendation was made
+- The engagement context that triggered it
+- The delivery channel(s) used
+- Whether the member went on to participate in the recommended incentive within your program's observation window
+
+This gives you a full, auditable record of what each member has been told to do, and whether they followed through.
+
+### Settings
+
+Next Best Action is configured at the program level:
+
+- _Enabled_: Turns Next Best Action on or off for the program.
+- _Observation Window (days)_: How long Fielo waits, following a recommendation, before evaluating whether the member participated.
+- _Delivery Channel_: External Notification, Email, or both.
+
+### Statuses
+
+Recommendation entries can be in one of three statuses:
+
+- _Open-Delivered_: The recommendation has been dispatched and is inside its observation window.
+- _Resolved-Participated_: The member participated in the recommended incentive within the observation window.
+- _Resolved-NotParticipated_: The observation window closed without the member participating in the recommended incentive.
