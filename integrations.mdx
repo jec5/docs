@@ -1,0 +1,25 @@
+---
+title: "Integrations"
+---
+
+Fielo Loyalty connects to your existing systems so that sales data flows in, transactional data flows out, and your team can manage the program the way that works best for them.
+
+## REST API
+
+External systems, such as your point of sale or ecommerce platform, can register sales directly with Fielo by calling the Create Sale endpoint. This is a good fit when your system of record can call out to Fielo in real time as sales occur.
+
+## Webhook
+
+Rather than calling Fielo directly, your external system can publish sale events to a webhook. Fielo picks up these events and processes them the same way as sales submitted via the API. This is a good fit when your systems are already event-driven or when you'd rather not manage outbound API calls to Fielo.
+
+## Bulk Data Import
+
+For systems that consolidate sales data on a schedule rather than in real time, Fielo supports bulk data import. A batch of sales data is submitted on a recurring basis and processed accordingly. This is a good fit when sales originate from multiple downstream systems that are periodically reconciled before being sent to Fielo.
+
+## Bulk Data Export
+
+Fielo can export transactional data — such as ledger entries, redemptions, and sales — to your organization's data warehouse on a recurring schedule. This is a good fit for organizations that want to combine loyalty data with other business data for reporting or analysis outside of Fielo's built-in Analytics.
+
+## MCP
+
+Loyalty admins can manage their program by chatting with the LLM tool of their choice. Through Fielo's MCP integration, admins can ask questions about their program and make changes without needing to navigate the app directly.
