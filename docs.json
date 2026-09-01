@@ -40,16 +40,10 @@
             ]
           },
           {
-            "group": "Design",
-            "icon": "object-group",
-            "pages": [
-              "design/designer"
-            ]
-          },
-          {
             "group": "Build",
             "icon": "pencil-ruler",
             "pages": [
+              "design/designer",
               "build/programs",
               "build/datasets",
               "build/segments",
@@ -68,8 +62,8 @@
             ]
           },
           {
-            "group": "Run",
-            "icon": "play",
+            "group": "Orchestrate",
+            "icon": "route",
             "pages": [
               "run/members",
               "run/sales",
@@ -77,10 +71,17 @@
               "run/incentives-processing",
               "run/redemptions",
               "run/presales",
-              "run/analytics",
-              "run/churn-prevention",
-              "run/uplift-prediction",
               "run/next-best-action"
+            ]
+          },
+          {
+            "group": "Optimize",
+            "icon": "gauge-high",
+            "pages": [
+              "run/analytics",
+              "run/autonomous-incentive-management",
+              "run/churn-prevention",
+              "run/uplift-prediction"
             ]
           },
           {
