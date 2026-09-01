@@ -70,8 +70,7 @@
               "run/ledger-entries",
               "run/incentives-processing",
               "run/redemptions",
-              "run/presales",
-              "run/next-best-action"
+              "run/presales"
             ]
           },
           {
@@ -81,7 +80,8 @@
               "run/analytics",
               "run/autonomous-incentive-management",
               "run/churn-prevention",
-              "run/uplift-prediction"
+              "run/uplift-prediction",
+              "run/next-best-action"
             ]
           },
           {
