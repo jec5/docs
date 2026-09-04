@@ -43,7 +43,7 @@
             "group": "Build",
             "icon": "pencil-ruler",
             "pages": [
-              "design/designer",
+              "build/designer",
               "build/programs",
               "build/datasets",
               "build/segments",
@@ -77,11 +77,11 @@
             "group": "Optimize",
             "icon": "gauge-high",
             "pages": [
-              "run/analytics",
-              "run/autonomous-incentive-management",
-              "run/churn-prevention",
-              "run/uplift-prediction",
-              "run/next-best-action"
+              "optimize/analytics",
+              "optimize/autonomous-incentive-management",
+              "optimize/churn-prevention",
+              "optimize/uplift-prediction",
+              "optimize/next-best-action"
             ]
           },
           {
