@@ -65,12 +65,12 @@
             "group": "Orchestrate",
             "icon": "route",
             "pages": [
-              "run/members",
-              "run/sales",
-              "run/ledger-entries",
-              "run/incentives-processing",
-              "run/redemptions",
-              "run/presales"
+              "orchestrate/members",
+              "orchestrate/sales",
+              "orchestrate/ledger-entries",
+              "orchestrate/incentives-processing",
+              "orchestrate/redemptions",
+              "orchestrate/presales"
             ]
           },
           {
