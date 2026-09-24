@@ -1,0 +1,45 @@
+---
+title: "Referrals"
+description: "Coming soon"
+---
+
+Referrals let your existing members bring new members into the program. When a referred member becomes active, or makes their first purchase, you can reward the new member, the referrer, or both — turning your membership base into a growth channel.
+
+### Referrer Code
+
+Each member can have a Referrer Code: an optional text field used to identify them as a referrer. If provided, it must be unique among all members. A member can share their Referrer Code or email address with the people they refer, which can be used to record the referral.
+
+### Referring a New Member
+
+When creating a new member, whether via API or administratively, you can specify who referred them by providing the referrer's:
+
+- External ID
+- Referrer Code
+- Email Address
+
+Members cannot be referred by themselves.
+
+### Referral History
+
+If a new member was referred, the referrer is recorded on their profile in a field called Referred By, for historical reference.
+
+The list of members a member has referred is accessible from their own record page, so you can see everyone they've brought into the program at a glance.
+
+### Reward the New Member and the Referrer
+
+Referrals are rewarded through [Incentive Rules](/build/incentives-config), the same way as any other member behavior, based on two moments in the new member's lifecycle:
+
+- **Upon Referral**: When a referred member first becomes _Open-Active_, an Event of type `Referred` is created for the new member and an Event of type Referrer is created for the referrer. These events are only generated the first time the referred member reaches _Open-Active_ status.
+- **Upon First Purchase**: When a referred member registers their first sale, an Event of type `Referred Sale` is created for the new member and an Event of type Referrer Sale is created for the referrer.
+
+Because the new member and the referrer each get their own Event, you can build distinct incentive rules — with their own criteria and rewards — for each side of the referral, and choose to reward the new member, the referrer, or both, at either moment.
+
+You can also add criteria to a referrer's rule based on the referrer's own member status — for example, limiting eligibility to referrers who are currently _Open-Active_.
+
+### Limit Referrer Rewards
+
+To prevent a single member from being rewarded an unlimited number of times for referring others, scope a [Cap](/build/caps) to the Referrer and Referrer Sale data sets. This lets you set a maximum number of times a member can be rewarded as a referrer, optionally within a rolling measurement period.
+
+### Insights
+
+The number of referrals is available as a metric on your [Analytics](/optimize/analytics) dashboard.
