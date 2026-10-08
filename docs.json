@@ -56,7 +56,7 @@
               "build/redemption-ceiling-rules",
               "build/tiers",
               "build/badges",
-              "referrals",
+              "build/referrals",
               "build/event-schedules",
               "build/member-experiences",
               "build/b2b-portal"
