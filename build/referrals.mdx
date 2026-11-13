@@ -28,8 +28,8 @@ The list of members a member has referred is accessible from their own record pa
 
 Referrals are rewarded through [Incentive Rules](/build/incentives-config), the same way as any other member behavior, based on two moments in the new member's lifecycle:
 
-- **Upon Referral**: When a referred member first becomes _Open-Active_, an Event of type `Referred` is created for the new member and an Event of type Referrer is created for the referrer. These events are only generated the first time the referred member reaches _Open-Active_ status.
-- **Upon First Purchase**: When a referred member registers their first sale, an Event of type `Referred Sale` is created for the new member and an Event of type Referrer Sale is created for the referrer.
+- **Upon Referral**: When a referred member first becomes _Open-Active_, an Event of type `Referred` is created for the new member and an Event of type `Referrer` is created for the referrer. These events are only generated the first time the referred member reaches _Open-Active_ status.
+- **Upon First Purchase**: When a referred member registers their first sale, an Event of type `Referred Sale` is created for the new member and an Event of type `Referrer Sale` is created for the referrer.
 
 Because the new member and the referrer each get their own Event, you can build distinct incentive rules — with their own criteria and rewards — for each side of the referral, and choose to reward the new member, the referrer, or both, at either moment.
 
