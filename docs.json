@@ -58,8 +58,8 @@
               "build/badges",
               "build/referrals",
               "build/event-schedules",
-              "build/member-experiences",
-              "build/b2b-portal"
+              "build/profile-completion",
+              "build/member-experience"
             ]
           },
           {
@@ -136,5 +136,15 @@
       "youtube": "https://www.youtube.com/channel/UCTv33JUhjwpWigHhimhzRyA",
       "linkedin": "https://www.linkedin.com/company/fielo/"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/build/b2b-portal",
+      "destination": "/build/member-experience"
+    },
+    {
+      "source": "/build/member-experiences",
+      "destination": "/build/member-experience"
+    }
+  ]
 }

@@ -1,0 +1,42 @@
+---
+title: "Incentivize Profile Completion"
+---
+
+Reward members for filling in their profile so you can learn more about them and target offers accordingly. When a member completes a profile field for the first time, Fielo records a Profile Completion event that your [incentive rules](/build/incentives-config) can reward.
+
+## Enable Profile Completion Tracking
+
+Profile completion tracking is configured at the program level. It is off by default, so nothing is recorded until you turn it on.
+
+- _Record profile completion events_: Turn this on to have Fielo record a Profile Completion event whenever a tracked field is filled in. Default: disabled.
+- _Profile completion fields to track_: The member fields that should be tracked. Events are only recorded for fields you specify here.
+
+## When Events Are Recorded
+
+A Profile Completion event is created when a blank member field is filled in for the first time, subject to the following conditions:
+
+- The field is one of the program's tracked profile completion fields.
+- The member is _Open-Active_.
+- The field is filled in after the member record was first created. Values supplied when the member is created do not generate events.
+- The field has not already been recorded for that member. If a field is filled in, cleared and then filled in again, the second fill is not recorded, so members can't earn repeatedly by toggling the same field.
+
+Each event includes a _Filled In Field_ attribute identifying which field the member completed.
+
+## Reward Profile Completion
+
+To reward members for completing their profile, create an incentive rule on the Event source data:
+
+1. On the Incentives page, create an incentive, or open an existing one, and add a rule.
+2. Set _Source Data_ to **Event**.
+3. Add criteria that identify Profile Completion events. To reward only specific fields, add a criterion on _Filled In Field_. For example, one rule can reward adding a date of birth while another rewards adding a mobile number.
+4. Specify the reward, then activate the incentive.
+
+Because you can create a separate rule per field, you can reward each field differently, or reward a single field without rewarding others.
+
+<Tip>
+  Fields such as date of birth also power other campaigns. Rewarding members for providing it lets you reward them on their birthday using an [Event Schedule](/build/event-schedules).
+</Tip>
+
+## Limit How Often Members Can Earn
+
+To control how many times a member can earn from profile completion over a period, use [Caps](/build/caps). A cap limits how many times a member can be rewarded for a kind of activity within a measurement period, and caps are scoped by [Data Set](/build/datasets).

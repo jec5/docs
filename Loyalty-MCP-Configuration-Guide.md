@@ -39,4 +39,4 @@ Prompts 5 and 6 write data. The playground is shared and is reset from time to t
 ## If something goes wrong
 
 - **Sign-in page says the redirect URI is not allowed:** your client isn't on the list yet. Tell us which client you use.
-- **Signed in, but the connection fails (error 400 or "couldn't connect"):** your invite isn't active yet, or your user has no application access. Write to SUPPORT_EMAIL.
+- **Signed in, but the connection fails (error 400 or "couldn't connect"):** your invite isn't active yet, or your user has no application access. Write to [support@fielo.com](mailto:support@fielo.com).

@@ -20,6 +20,58 @@ For systems that consolidate sales data on a schedule rather than in real time, 
 
 Fielo can export transactional data — such as ledger entries, redemptions, and sales — to your organization's data warehouse on a recurring schedule. This is a good fit for organizations that want to combine loyalty data with other business data for reporting or analysis outside of Fielo's built-in Analytics.
 
-## MCP (Coming Soon)
+## MCP
 
 Loyalty admins can manage their program by chatting with the LLM tool of their choice. Through Fielo's MCP integration, admins can ask questions about their program and make changes without needing to navigate the app directly.
+
+## Popular Platforms
+
+Fielo Loyalty connects to the commerce and marketing platforms you already use, through the REST API, webhook and bulk data options above.
+
+### Commerce
+
+<LogoGrid items="commerce" />
+
+### Marketing
+
+<LogoGrid items="marketing" />
+
+## Implementation Partners
+
+Our partners can help you connect Fielo Loyalty to your systems and launch your program.
+
+<LogoGrid items="partners" />
+
+export const LogoGrid = ({ items }) => {
+  const sets = {
+    commerce: [
+      { name: "Shopify", src: "/images/logos/shopify.png" },
+      { name: "WooCommerce", src: "/images/logos/woocommerce.png" },
+      { name: "Salesforce Commerce Cloud", src: "/images/logos/salesforce-commerce-cloud.png" },
+      { name: "Adobe Commerce", src: "/images/logos/adobe-commerce.png" },
+      { name: "BigCommerce", src: "/images/logos/bigcommerce.png" },
+    ],
+    marketing: [
+      { name: "Braze", src: "/images/logos/braze.png" },
+      { name: "Salesforce Marketing Cloud", src: "/images/logos/salesforce-marketing-cloud.png" },
+    ],
+    partners: [
+      { name: "Deloitte", src: "/images/logos/deloitte.png" },
+      { name: "Accenture", src: "/images/logos/accenture.png" },
+      { name: "Valuenet", src: "/images/logos/valuenet.png" },
+    ],
+  };
+  const list = sets[items] || [];
+  return (
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", margin: "12px 0 24px" }}>
+      {list.map((l) => (
+        <div
+          key={l.name}
+          style={{ background: "#FFFFFF", border: "1px solid #E5E7EB", borderRadius: "12px", width: "180px", height: "88px", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px" }}
+        >
+          <img src={l.src} alt={l.name + " logo"} style={{ maxWidth: "140px", maxHeight: "52px", width: "auto", height: "auto", objectFit: "contain", margin: 0 }} />
+        </div>
+      ))}
+    </div>
+  );
+};
