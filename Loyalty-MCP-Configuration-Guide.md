@@ -1,6 +1,10 @@
 # Try Fielo Loyalty from your AI assistant
 
-Fielo Loyalty Playground is a demo Loyalty environment you can drive from an MCP client: look up programs and members, check points and incentive progress, and try the actions a loyalty manager uses every day. Access is by invitation. You sign in with the account from your invite e-mail.
+Fielo Loyalty Playground is a demo Loyalty environment you can drive from an MCP client: look up programs and members, check points and incentive progress, and try the actions a loyalty manager uses every day.
+
+## Request Access
+
+Reach out to [support@fielo.com](mailto:support@fielo.com) and we will invite you to set up your test account.
 
 ## Connect
 
